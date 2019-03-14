@@ -20,10 +20,10 @@ object Versions {
   const val espresso = "3.0.1"
 }
 
-object Libs {
+object DepLibs {
   const val androidPlugin = "com.android.tools.build:gradle:${Versions.androidPlugin}"
-  const val kotlinlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
-  const val greebDaolugin = "org.greenrobot:greendao-gradle-plugin:${Versions.greenDao}"
+  const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+  const val greenDaoPlugin = "org.greenrobot:greendao-gradle-plugin:${Versions.greenDao}"
   const val butterKnifePlugin = "com.jakewharton:butterknife-gradle-plugin:${Versions.butterKnife}"
 
   //KotlinLib
@@ -72,7 +72,6 @@ object Libs {
   const val rxErrorHandler2 = "me.jessyan:rxerrorhandler:2.1.1"
   const val rxDownload = "zlc.season:rxdownload3:1.2.7"
   const val rxLifecycle = "com.trello.rxlifecycle3:rxlifecycle:${Versions.rxLifecycle}"
-
   // If you want to bind to Android-specific lifecycles
   const val rxLifecycleAndroid = "com.trello.rxlifecycle3:rxlifecycle-android:${Versions.rxLifecycle}"
   // If you want pre-written Activities and Fragments you can subclass as providers
@@ -150,5 +149,5 @@ object Libs {
   const val espressoCore = "com.android.support.test.espresso:espresso-core:${Versions.espresso}"
   const val espressoContrib = "com.android.support.test.espresso:espresso-contrib:${Versions.espresso}"
   const val espressoIntents = "com.android.support.test.espresso:espresso-intents:${Versions.espresso}"
-  const val mockitoCore = "org.mockito:mockito-core:1.+"
+  const val mockitoCore = "org.mockito:mockito-core:2.25.0"
 }
