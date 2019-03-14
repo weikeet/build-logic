@@ -14,7 +14,8 @@ object Versions {
   const val dagger2 = "2.19"
   const val glide = "4.9.0"
   const val greenDao = "3.2.2"
-  const val butterKnife = "8.8.1" //"10.0.0": androidX
+  const val butterKnife = "8.8.1"
+  const val butterKnifeX = "10.0.0"
   const val rxLifecycle = "3.0.0"
   const val leakCanary = "1.5.4"
   const val espresso = "3.0.1"
@@ -26,6 +27,7 @@ object DepLibs {
   const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
   const val greenDaoPlugin = "org.greenrobot:greendao-gradle-plugin:${Versions.greenDao}"
   const val butterKnifePlugin = "com.jakewharton:butterknife-gradle-plugin:${Versions.butterKnife}"
+  const val butterKnifeXPlugin = "com.jakewharton:butterknife-gradle-plugin:${Versions.butterKnifeX}"
 
   // KotlinLib
   // https://github.com/JetBrains/kotlin
@@ -111,7 +113,7 @@ object DepLibs {
 
   // CustomView
   // https://github.com/chrisbanes/PhotoView
-  const val photoView = "com.github.chrisbanes.photoview:library:2.3.0"
+  const val photoView = "com.github.chrisbanes:PhotoView:2.3.0"
   // https://github.com/lopspower/CircularImageView
   const val circularImageView = "com.mikhaellopez:circularimageview:3.2.0"
   // https://github.com/Bigkoo/Android-PickerView 时间选择器/省市区三级联动
@@ -139,6 +141,8 @@ object DepLibs {
   // https://github.com/JakeWharton/butterknife
   const val butterKnife = "com.jakewharton:butterknife:${Versions.butterKnife}"
   const val butterKnifeCompiler = "com.jakewharton:butterknife-compiler:${Versions.butterKnife}"
+  const val butterKnifeX = "com.jakewharton:butterknife:${Versions.butterKnifeX}"
+  const val butterKnifeXCompiler = "com.jakewharton:butterknife-compiler:${Versions.butterKnifeX}"
   // https://github.com/greenrobot/EventBus
   const val eventBus = "org.greenrobot:eventbus:3.1.1"
   // https://github.com/greenrobot/greenDAO
