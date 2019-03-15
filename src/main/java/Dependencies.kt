@@ -32,6 +32,8 @@ object Versions {
   const val stetho = "1.5.0"
   const val ijkPlayer = "0.8.8"
   const val boxing = "1.0.4"
+  const val rxBinding = "3.0.0-alpha2"
+  const val materialDialog = "2.0.3"
 }
 
 object DepLibs {
@@ -113,6 +115,18 @@ object DepLibs {
   // DEPRECATED: Use rxlifecycle-android-lifecycle instead. This will be removed in a future release.
   const val rxLifecycleNavi = "com.trello.rxlifecycle3:rxlifecycle-navi:${Versions.rxLifecycle}"
 
+  // https://github.com/JakeWharton/RxBinding
+  const val rxBinding = "com.jakewharton.rxbinding3:rxbinding:${Versions.rxBinding}"
+  const val rxBindingMaterial = "com.jakewharton.rxbinding3:rxbinding-material:${Versions.rxBinding}"
+  const val rxBindingXCore = "com.jakewharton.rxbinding3:rxbinding-core:${Versions.rxBinding}"
+  const val rxBindingXAppCompat = "com.jakewharton.rxbinding3:rxbinding-appcompat:${Versions.rxBinding}"
+  const val rxBindingXDrawerLayout = "com.jakewharton.rxbinding3:rxbinding-drawerlayout:${Versions.rxBinding}"
+  const val rxBindingXLeanBack = "com.jakewharton.rxbinding3:rxbinding-leanback:${Versions.rxBinding}"
+  const val rxBindingXRecyclerView = "com.jakewharton.rxbinding3:rxbinding-recyclerview:${Versions.rxBinding}"
+  const val rxBindingXSlidingPanelLayout = "com.jakewharton.rxbinding3:rxbinding-slidingpanelayout:${Versions.rxBinding}"
+  const val rxBindingXSwipeRefreshLayout = "com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:${Versions.rxBinding}"
+  const val rxBindingXViewPager = "com.jakewharton.rxbinding3:rxbinding-viewpager:${Versions.rxBinding}"
+  
   // ImageLoader
   // https://github.com/bumptech/glide
   const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
@@ -181,8 +195,12 @@ object DepLibs {
   const val boxingImpl = "com.bilibili:boxing-impl:${Versions.boxing}"
   // Media album https://github.com/yanzhenjie/Album
   const val album = "com.yanzhenjie:album:2.1.3"
+  // https://github.com/DroidNinja/Android-FilePicker
+  const val filePicker = "com.droidninja:filepicker:2.2.0"
   // https://github.com/dm77/barcodescanner
   const val barcodeScanner = "me.dm7.barcodescanner:zxing:1.9.13"
+  // https://github.com/SumiMakito/AwesomeQRCode
+  const val awesomeQRCode = "com.github.SumiMakito:AwesomeQRCode:1.2.0"
   // https://github.com/hdodenhof/CircleImageView
   const val circleImageView = "de.hdodenhof:circleimageview:3.0.0"
   // https://github.com/huangyanbin/smartTable
@@ -208,8 +226,26 @@ object DepLibs {
   // https://github.com/wasabeef/recyclerview-animators
   const val recyclerViewAnim = "jp.wasabeef:recyclerview-animators:3.0.0"
   // https://github.com/CymChad/BaseRecyclerViewAdapterHelper
-  const val BaseRecyclerViewAdapterHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46"
-
+  const val baseRecyclerViewAdapterHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46"
+  // https://github.com/PureWriter/about-page
+  const val aboutPage = "me.drakeet.support:about:2.3.0-alpha2"
+  const val multiType = "me.drakeet.multitype:multitype:4.0.0-alpha2"
+  // https://github.com/ChadCSong/ShineButton
+  const val shineButton = "com.sackcentury:shinebutton:0.2.0"
+  // https://github.com/google/flexbox-layout
+  const val = "com.google.android:flexbox:1.1.0"
+  // https://github.com/airbnb/lottie-android
+  const val lottie = "com.airbnb.android:lottie:2.8.0"
+  // https://github.com/afollestad/material-dialogs
+  const val materialDialogCore = "com.afollestad.material-dialogs:core:${Versions.materialDialog}"
+  const val materialDialogInput = "com.afollestad.material-dialogs:input:${Versions.materialDialog}"
+  const val materialDialogFiles = "com.afollestad.material-dialogs:files:${Versions.materialDialog}"
+  const val materialDialogColor = "com.afollestad.material-dialogs:color:${Versions.materialDialog}"
+  // https://github.com/HotBitmapGG/RingProgressBar
+  const val ringProgressBar = "com.github.HotBitmapGG:RingProgressBar:V1.2.3"
+  // https://github.com/Solartisan/WaveSideBar
+  // https://github.com/gjiazhe/WaveSideBar
+  const val waveSideBar = "com.gjiazhe:wavesidebar:1.3"
 
   // https://github.com/jeasonlzy/okhttp-OkGo
   const val okGo = "com.lzy.net:okgo:3.0.4"
