@@ -1,3 +1,11 @@
+/**
+ * 选择DependenceLibrary时需要注意:
+ * 1. 打开连接查看依赖的repositories
+ * 2. 是否是AndroidX特有
+ * 3. 不同版本内容
+ * 4. 混淆内容
+ */
+
 object Versions {
   const val minSdk = 21
   const val targetSdk = 28
@@ -19,6 +27,11 @@ object Versions {
   const val rxLifecycle = "3.0.0"
   const val leakCanary = "1.5.4"
   const val espresso = "3.0.1"
+  const val tinker = "1.9.1"
+  const val godEye = "2.3.5"
+  const val stetho = "1.5.0"
+  const val ijkPlayer = "0.8.8"
+  const val boxing = "1.0.4"
 }
 
 object DepLibs {
@@ -28,6 +41,9 @@ object DepLibs {
   const val greenDaoPlugin = "org.greenrobot:greendao-gradle-plugin:${Versions.greenDao}"
   const val butterKnifePlugin = "com.jakewharton:butterknife-gradle-plugin:${Versions.butterKnife}"
   const val butterKnifeXPlugin = "com.jakewharton:butterknife-gradle-plugin:${Versions.butterKnifeX}"
+  const val tinkerPlugin = "com.tencent.tinker:tinker-patch-gradle-plugin:${Versions.tinker}"
+  // https://github.com/shwenzhang/AndResGuard
+  const val andResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.15"
 
   // KotlinLib
   // https://github.com/JetBrains/kotlin
@@ -134,8 +150,71 @@ object DepLibs {
   const val materialChipsInput = "com.github.pchmn:MaterialChipsInput:1.0.8"
   // https://github.com/daniel-stoneuk/material-about-library
   const val materialAboutLibrary = "com.github.daniel-stoneuk:material-about-library:2.3.0"
+  // https://github.com/Devlight/NavigationTabBar
+  const val navigationTabBar = "devlight.io:navigationtabbar:1.2.5"
+  // https://github.com/Mauker1/MaterialSearchView
+  const val materialSearchView = "br.com.mauker.materialsearchview:materialsearchview:1.2.3"
+  // https://github.com/lapism/MaterialSearchView
+  const val materialSearchView2 = "com.lapism:searchview:27.1.1.0.0"
+  // https://github.com/fython/MaterialStepperView
+  const val materialStepperView = "moe.feng:MaterialStepperView:0.2.4.2"
+  // https://github.com/mancj/MaterialSearchBar
+  const val materialSearchBar = "com.github.mancj:MaterialSearchBar:0.8.2"
+  // https://github.com/navasmdc/MaterialDesignLibrary
+  const val materialDesignLibrary = "com.github.navasmdc:MaterialDesign:1.5@aar"
+  // https://github.com/idic779/monthweekmaterialcalendarview
+  const val materialCalendarView = "com.github.idic779:monthweekmaterialcalendarview:1.7"
   // https://github.com/wdullaer/MaterialDateTimePicker
-  const val materialDateTimePicker = "com.wdullaer:materialdatetimepicker:4.1.0"
+  const val materialDateTimePicker = "com.wdullaer:materialdatetimepicker:4.1.2"
+  // https://github.com/Ramotion/folding-cell-android
+  const val foldingCell = "com.ramotion.foldingcell:folding-cell:1.2.3"
+  // https://github.com/ogaclejapan/SmartTabLayout
+  const val smartTabLayoutXLib = "com.ogaclejapan.smarttablayout:library:2.0.0@aar"
+  const val smartTabLayoutXLib = "com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar"
+  const val smartTabLayoutLib = "com.ogaclejapan.smarttablayout:library:1.7.0@aar"
+  const val smartTabLayoutLib = "com.ogaclejapan.smarttablayout:utils-v4:1.7.0@aar"
+  const val smartTabLayoutLib = "com.ogaclejapan.smarttablayout:library:2.0.0@aar"
+  // 图片视频选择 https://github.com/zhihu/Matisse
+  const val matisse = "com.zhihu.android:matisse:0.5.2-beta4"
+  // Media选择 https://github.com/bilibili/boxing
+  const val boxingCore = "com.bilibili:boxing:${Versions.boxing}"
+  const val boxingImpl = "com.bilibili:boxing-impl:${Versions.boxing}"
+  // Media album https://github.com/yanzhenjie/Album
+  const val album = "com.yanzhenjie:album:2.1.3"
+  // https://github.com/dm77/barcodescanner
+  const val barcodeScanner = "me.dm7.barcodescanner:zxing:1.9.13"
+  // https://github.com/hdodenhof/CircleImageView
+  const val circleImageView = "de.hdodenhof:circleimageview:3.0.0"
+  // https://github.com/huangyanbin/smartTable
+  const val smartTable = "com.github.huangyanbin:SmartTable:2.2.0"
+  // https://github.com/gyf-dev/ImmersionBar
+  const val = "com.gyf.immersionbar:immersionbar:2.3.3"
+  // https://github.com/scwang90/SmartRefreshLayout
+  const val smartRefreshLayout = "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21"
+  const val smartRefreshHeader = "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-21"
+  const val smartRefreshLayoutX = "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-4"
+  const val smartRefreshHeaderX = "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-andx-4"
+  // ThemeLib https://github.com/bilibili/MagicaSakura
+  const val magicaSakura = "com.bilibili:magicasakura:0.1.9-beta3@aar"
+  // https://github.com/rubensousa/RecyclerViewSnap
+  const val recyclerViewSnapX = "com.github.rubensousa:gravitysnaphelper:2.0"
+  const val recyclerViewSnap = "com.github.rubensousa:gravitysnaphelper-compat:2.0"
+  // https://github.com/yanzhenjie/SwipeRecyclerView
+  const val swipeRecyclerView = "com.yanzhenjie.recyclerview:support:1.3.1"
+  const val swipeRecyclerViewX = "com.yanzhenjie.recyclerview:x:1.3.1"
+  // UserGuildeLib https://github.com/AppIntro/AppIntro
+  const val appIntroX = "com.github.AppIntro:AppIntro:v5.1.0"
+  const val appIntro = "com.github.AppIntro:AppIntro:v4.2.3"
+  // https://github.com/wasabeef/recyclerview-animators
+  const val recyclerViewAnim = "jp.wasabeef:recyclerview-animators:3.0.0"
+  // https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+  const val BaseRecyclerViewAdapterHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46"
+
+
+  // https://github.com/jeasonlzy/okhttp-OkGo
+  const val okGo = "com.lzy.net:okgo:3.0.4"
+  const val okRx2 = "com.lzy.net:okrx2:2.0.2"
+  const val okObserver = "com.lzy.net:okserver:2.0.5"
 
   // Tools
   // https://github.com/JakeWharton/butterknife
@@ -158,6 +237,36 @@ object DepLibs {
   const val progressManager = "me.jessyan:progressmanager:1.5.0"
   // https://github.com/JessYanCoding/RetrofitUrlManager
   const val retrofitUrlManager = "me.jessyan:retrofit-url-manager:1.4.0"
+  // https://github.com/Tencent/tinker
+  const val tinkerLib = "com.tencent.tinker:tinker-android-lib:${Versions.tinker}"
+  const val tinkerAnno = "com.tencent.tinker:tinker-android-anno:${Versions.tinker}"
+  // https://github.com/amitshekhariitbhu/Android-Debug-Database
+  const val debugDb = "com.amitshekhar.android:debug-db:1.0.6"
+  const val debugDbEncrypt = "com.amitshekhar.android:debug-db-encrypt:1.0.6"
+  // 性能检测 https://github.com/Kyson/AndroidGodEye
+  const val "cn.hikyson.godeye:godeye-core:${Versions.godEye}"
+  const val "cn.hikyson.godeye:godeye-monitor:${Versions.godEye}"
+  const val "cn.hikyson.godeye:godeye-monitor-no-op:${Versions.godEye}"
+  const val "cn.hikyson.godeye:godeye-toolbox:${Versions.godEye}"
+  // Debug bridge https://github.com/facebook/stetho
+  const val "com.facebook.stetho:stetho:${Versions.stetho}"
+  const val "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
+  // https://github.com/bilibili/ijkplayer
+  const val ijkPlayer = "tv.danmaku.ijk.media:ijkplayer-java:${Versions.ijkPlayer}"
+  const val ijkPlayerArmV7a = "tv.danmaku.ijk.media:ijkplayer-armv7a:${Versions.ijkPlayer}"
+  const val ijkPlayerArm64 = "tv.danmaku.ijk.media:ijkplayer-arm64:${Versions.ijkPlayer}"
+  // https://github.com/googlesamples/easypermissions
+  const val easyPermissionsX = "pub.devrel:easypermissions:3.0.0"
+  const val easyPermissions = "pub.devrel:easypermissions:2.0.1"
+  // https://github.com/YoKeyword/Fragmentation
+  const val fragmentation = "me.yokeyword:fragmentation:1.3.6"
+  // https://github.com/MindorksOpenSource/PRDownloader
+  const val prDownloader = "com.mindorks.android:prdownloader:0.5.0"
+  // https://github.com/lingochamp/FileDownloader
+  const val fileDownloader = "com.liulishuo.filedownloader:library:1.7.6"
+  // https://github.com/bilibili/DanmakuFlameMaster
+  const val danmakuFlameMaster = "com.github.ctiao:DanmakuFlameMaster:0.9.25"
+  const val danmakuNdkBitmap = "com.github.ctiao:ndkbitmap-armv7a:0.9.21"
 
   const val dagger2 = "com.google.dagger:dagger:${Versions.dagger2}"
   const val dagger2Android = "com.google.dagger:dagger-android:${Versions.dagger2}"
@@ -173,6 +282,8 @@ object DepLibs {
   const val logger = "com.orhanobut:logger:2.2.0"
   // https://github.com/JakeWharton/timber
   const val timber = "com.jakewharton.timber:timber:4.7.1"
+  // https://github.com/pqpo/Log4a
+  const val log4a = "com.github.pqpo:Log4a:1.4.2"
   // https://developer.umeng.com/sdk/android
   const val umengAnalytics = "com.umeng.analytics:analytics:6.0.1"
   // https://github.com/square/leakcanary
