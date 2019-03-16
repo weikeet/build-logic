@@ -34,6 +34,7 @@ object Versions {
   const val boxing = "1.0.4"
   const val rxBinding = "3.0.0-alpha2"
   const val materialDialog = "2.0.3"
+  const val genius = "2.1.1"
 }
 
 object DepLibs {
@@ -136,6 +137,20 @@ object DepLibs {
   const val picasso = "com.squareup.picasso:picasso:2.71828"
   // https://github.com/facebook/fresco
   const val fresco = "com.facebook.fresco:fresco:1.13.0"
+  // https://github.com/qiujuer/Genius-Android
+  // ui module
+  const val geniusUi = "net.qiujuer.genius:ui:${Versions.genius}"
+  const val geniusRes = "net.qiujuer.genius:res:${Versions.genius}"
+  // use to bitmap blur and more
+  const val geniusGraphics = "net.qiujuer.genius:graphics:${Versions.genius}"
+  // ping/telnet/tracert/dns and run cmd
+  const val geniusKitCmd = "net.qiujuer.genius:kit-cmd:${Versions.genius}"
+  // shuttle between ui-thread and child-thread
+  const val geniusKitHandler = "net.qiujuer.genius:kit-handler:${Versions.genius}"
+  // calss reflect
+  const val geniusKitReflect = "net.qiujuer.genius:kit-reflect:${Versions.genius}"
+  // https://github.com/Nightonke/BoomMenu
+  const val boomMenu = "com.nightonke:boommenu:2.1.1"
 
   // ScreenAdaptation
   // https://github.com/JessYanCoding/AndroidAutoSize
@@ -160,6 +175,8 @@ object DepLibs {
   const val mpAndroidChart = "com.github.PhilJay:MPAndroidChart:v3.0.3"
   // https://github.com/aurelhubert/ahbottomnavigation
   const val ahBottomNavigation = "com.aurelhubert:ahbottomnavigation:2.3.4"
+  // https://github.com/armcha/Space-Navigation-View
+  const val sapceNavigationView = "com.github.armcha:SpaceNavigationView:1.6.0"
   // https://github.com/pchmn/MaterialChipsInput
   const val materialChipsInput = "com.github.pchmn:MaterialChipsInput:1.0.8"
   // https://github.com/daniel-stoneuk/material-about-library
@@ -245,6 +262,13 @@ object DepLibs {
   // https://github.com/Solartisan/WaveSideBar
   // https://github.com/gjiazhe/WaveSideBar
   const val waveSideBar = "com.gjiazhe:wavesidebar:1.3"
+  // https://github.com/Devlight/InfiniteCycleViewPager
+  const val cycleViewPager = "com.github.devlight:infinitecycleviewpager:1.0.2"
+  // https://github.com/robinhood/ticker
+  const val ticker = "com.robinhood.ticker:ticker:2.0.1"
+  // https://github.com/aliab/circular-music-progressbar
+  const val circularMusicProgressbar = "com.github.aliab:circular-music-progressbar:v1.3.0"
+  // 
 
   // https://github.com/jeasonlzy/okhttp-OkGo
   const val okGo = "com.lzy.net:okgo:3.0.4"
