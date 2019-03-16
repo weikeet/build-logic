@@ -184,10 +184,9 @@ object DepLibs {
   const val foldingCell = "com.ramotion.foldingcell:folding-cell:1.2.3"
   // https://github.com/ogaclejapan/SmartTabLayout
   const val smartTabLayoutXLib = "com.ogaclejapan.smarttablayout:library:2.0.0@aar"
-  const val smartTabLayoutXLib = "com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar"
+  const val smartTabLayoutXUtil = "com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar"
   const val smartTabLayoutLib = "com.ogaclejapan.smarttablayout:library:1.7.0@aar"
-  const val smartTabLayoutLib = "com.ogaclejapan.smarttablayout:utils-v4:1.7.0@aar"
-  const val smartTabLayoutLib = "com.ogaclejapan.smarttablayout:library:2.0.0@aar"
+  const val smartTabLayoutUtil = "com.ogaclejapan.smarttablayout:utils-v4:1.7.0@aar"
   // 图片视频选择 https://github.com/zhihu/Matisse
   const val matisse = "com.zhihu.android:matisse:0.5.2-beta4"
   // Media选择 https://github.com/bilibili/boxing
@@ -206,7 +205,7 @@ object DepLibs {
   // https://github.com/huangyanbin/smartTable
   const val smartTable = "com.github.huangyanbin:SmartTable:2.2.0"
   // https://github.com/gyf-dev/ImmersionBar
-  const val = "com.gyf.immersionbar:immersionbar:2.3.3"
+  const val immersionBar = "com.gyf.immersionbar:immersionbar:2.3.3"
   // https://github.com/scwang90/SmartRefreshLayout
   const val smartRefreshLayout = "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21"
   const val smartRefreshHeader = "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-21"
@@ -233,7 +232,7 @@ object DepLibs {
   // https://github.com/ChadCSong/ShineButton
   const val shineButton = "com.sackcentury:shinebutton:0.2.0"
   // https://github.com/google/flexbox-layout
-  const val = "com.google.android:flexbox:1.1.0"
+  const val flexBox = "com.google.android:flexbox:1.1.0"
   // https://github.com/airbnb/lottie-android
   const val lottie = "com.airbnb.android:lottie:2.8.0"
   // https://github.com/afollestad/material-dialogs
@@ -280,13 +279,13 @@ object DepLibs {
   const val debugDb = "com.amitshekhar.android:debug-db:1.0.6"
   const val debugDbEncrypt = "com.amitshekhar.android:debug-db-encrypt:1.0.6"
   // 性能检测 https://github.com/Kyson/AndroidGodEye
-  const val "cn.hikyson.godeye:godeye-core:${Versions.godEye}"
-  const val "cn.hikyson.godeye:godeye-monitor:${Versions.godEye}"
-  const val "cn.hikyson.godeye:godeye-monitor-no-op:${Versions.godEye}"
-  const val "cn.hikyson.godeye:godeye-toolbox:${Versions.godEye}"
+  const val godEyeCore = "cn.hikyson.godeye:godeye-core:${Versions.godEye}"
+  const val godEyeMonitor = "cn.hikyson.godeye:godeye-monitor:${Versions.godEye}"
+  const val godEyeMonitorNoOp = "cn.hikyson.godeye:godeye-monitor-no-op:${Versions.godEye}"
+  const val godEyeToolBox = "cn.hikyson.godeye:godeye-toolbox:${Versions.godEye}"
   // Debug bridge https://github.com/facebook/stetho
-  const val "com.facebook.stetho:stetho:${Versions.stetho}"
-  const val "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
+  const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
+  const val stethoOkHttp3 = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
   // https://github.com/bilibili/ijkplayer
   const val ijkPlayer = "tv.danmaku.ijk.media:ijkplayer-java:${Versions.ijkPlayer}"
   const val ijkPlayerArmV7a = "tv.danmaku.ijk.media:ijkplayer-armv7a:${Versions.ijkPlayer}"
