@@ -181,6 +181,18 @@ object DepLibs {
   const val materialChipsInput = "com.github.pchmn:MaterialChipsInput:1.0.8"
   // https://github.com/daniel-stoneuk/material-about-library
   const val materialAboutLibrary = "com.github.daniel-stoneuk:material-about-library:2.3.0"
+  // https://github.com/jrvansuita/MaterialAbout
+  const val materialAbout = "com.github.jrvansuita:MaterialAbout:0.2.3"
+  // load anim https://github.com/nntuyen/mkloader
+  const val mkLoader = "com.tuyenmonkey:mkloader:1.4.0"
+  // https://github.com/Andy671/Dachshund-Tab-Layout
+  const val dachTabLayout = "com.github.Andy671:Dachshund-Tab-Layout:v0.3.3"
+  // Alerting Library https://github.com/Tapadoo/Alerter 
+  const val alerter = "com.tapadoo.android:alerter:4.0.1" //AndroidX
+  // runtime theme library https://github.com/garretyoder/Colorful
+  const val colorful = "com.github.garretyoder:Colorful:2.3.4"
+  // contact picker https://github.com/quiin/UnifiedContactPicker
+  const val contactPicker = "com.github.quiin:unifiedContactPicker:1.0"
   // https://github.com/Devlight/NavigationTabBar
   const val navigationTabBar = "devlight.io:navigationtabbar:1.2.5"
   // https://github.com/Mauker1/MaterialSearchView
