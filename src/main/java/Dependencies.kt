@@ -193,6 +193,22 @@ object DepLibs {
   const val colorful = "com.github.garretyoder:Colorful:2.3.4"
   // contact picker https://github.com/quiin/UnifiedContactPicker
   const val contactPicker = "com.github.quiin:unifiedContactPicker:1.0"
+  // https://github.com/MAXDeliveryNG/slideview
+  const val slideView = "com.github.MAXDeliveryNG:slideview:1.1.0"
+  // 换肤框架 https://github.com/ximsfei/Android-skin-support
+  const val skinSupport = "skin.support:skin-support-appcompat:4.0.1"
+  // https://github.com/ImangazalievM/CircleMenu
+  const val circleMenu = "com.github.imangazalievm:circlemenu:2.0.2"
+  // 屏幕顶部底部显示消息 https://github.com/liuguangqiang/CookieBar
+  const val cookieBar = "com.liuguangqiang.cookie:library:1.0"
+  // 横向滑动组件 https://github.com/yarolegovich/DiscreteScrollView
+  const val discreteScrollView = "com.yarolegovich:discrete-scrollview:1.4.9"
+  // https://github.com/hluhovskyi/HoldingButton
+  const val holdingButton = "com.dewarder:holdingbutton:0.1.3"
+  // Dialog https://github.com/geniusforapp/fancyDialog
+  const val fancyDialog = "com.github.geniusforapp:fancyDialog:1.0"
+  // Read excel csv https://github.com/Cleveroad/AdaptiveTableLayout
+  const val adaptiveTableLayout = "com.cleveroad:adaptivetablelayout:1.2.1"
   // https://github.com/Devlight/NavigationTabBar
   const val navigationTabBar = "devlight.io:navigationtabbar:1.2.5"
   // https://github.com/Mauker1/MaterialSearchView
@@ -338,6 +354,8 @@ object DepLibs {
   // https://github.com/bilibili/DanmakuFlameMaster
   const val danmakuFlameMaster = "com.github.ctiao:DanmakuFlameMaster:0.9.25"
   const val danmakuNdkBitmap = "com.github.ctiao:ndkbitmap-armv7a:0.9.21"
+  // read smsVerifyCode https://github.com/stfalcon-studio/SmsVerifyCatcher
+  const val smsVerifyCode = "https://github.com/stfalcon-studio/SmsVerifyCatcher"
 
   const val dagger2 = "com.google.dagger:dagger:${Versions.dagger2}"
   const val dagger2Android = "com.google.dagger:dagger-android:${Versions.dagger2}"
