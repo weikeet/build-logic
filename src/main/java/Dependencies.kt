@@ -183,6 +183,8 @@ object DepLibs {
   const val materialAboutLibrary = "com.github.daniel-stoneuk:material-about-library:2.3.0"
   // https://github.com/jrvansuita/MaterialAbout
   const val materialAbout = "com.github.jrvansuita:MaterialAbout:0.2.3"
+  // ripple https://github.com/balysv/material-ripple
+  const val materialRipple = "com.balysv:material-ripple:1.0.2"
   // load anim https://github.com/nntuyen/mkloader
   const val mkLoader = "com.tuyenmonkey:mkloader:1.4.0"
   // https://github.com/Andy671/Dachshund-Tab-Layout
