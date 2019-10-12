@@ -8,15 +8,15 @@
 
 object Versions {
   const val minSdk = 21
-  const val targetSdk = 28
-  const val compileSdk = 28
+  const val targetSdk = 29
+  const val compileSdk = 29
   const val versionCode = 1
   const val versionName = "1.0"
 
-  const val androidPlugin = "3.3.2"
-  const val kotlin = "1.3.21"
+  const val androidPlugin = "3.5.1"
+  const val kotlin = "1.3.50"
   const val supportLib = "28.0.0"
-  const val supportXLib = "1.0.0-beta01"
+  const val supportXLib = "1.0.0"
   const val jetPack = "1.1.1"
   const val retrofit = "2.4.0"
   const val dagger2 = "2.19"
