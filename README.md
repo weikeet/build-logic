@@ -82,17 +82,17 @@ implementation deps.rxJava
 
    ```kotlin
    object Versions {
-       val supportLib = "28.0.0"
-       val retrofit = "2.4.0"
-       val rxJava = "2.2.3"
+       const val SupportLib = "28.0.0"
+       const val Retrofit = "2.4.0"
+       const val RxJava = "2.2.3"
    }
 
    object DepLibs {
-    val supportAnnotations = "com.android.support:support-annotations:${Versions.supportLib}"
-    val supportAppcompatV7 = "com.android.support:appcompat-v7:${Versions.supportLib}"
-    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    val retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
-    val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
+      const val supportAnnotations = "com.android.support:support-annotations:${Versions.SupportLib}"
+      const val supportAppcompatV7 = "com.android.support:appcompat-v7:${Versions.SupportLib}"
+      const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.Retrofit}"
+      const val retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.Retrofit}"
+      const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.RxJava}"
    }
    ```
 
