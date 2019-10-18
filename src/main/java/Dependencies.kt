@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 /**
  * 选择DependenceLibrary时需要注意:
  * 1. 打开连接查看依赖的repositories
@@ -32,6 +34,7 @@ object Versions {
 
 object DepLibs {
   // Plugin
+  // https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
   const val AndroidPlugin = "com.android.tools.build:gradle:3.5.1"
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.17"
@@ -40,10 +43,6 @@ object DepLibs {
   // https://github.com/JetBrains/kotlin
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Kotlin}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin}"
-
-  // ScreenAdaptation
-  // https://github.com/JessYanCoding/AndroidAutoSize
-  const val AutoSize = "me.jessyan:autosize:1.1.2"
 
   // Tools
   // https://github.com/greenrobot/EventBus
