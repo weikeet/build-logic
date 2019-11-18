@@ -35,7 +35,7 @@ object Versions {
 object DepLibs {
   // Plugin
   // https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
-  const val AndroidPlugin = "com.android.tools.build:gradle:3.5.1"
+  const val AndroidPlugin = "com.android.tools.build:gradle:3.5.2"
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.17"
 
