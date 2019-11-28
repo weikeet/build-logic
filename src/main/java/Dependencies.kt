@@ -333,6 +333,13 @@ object AnalyticLibs {
   const val GodEyeToolBox = "cn.hikyson.godeye:godeye-toolbox:${Versions.GodEye}"
   const val GodEyeMonitor = "cn.hikyson.godeye:godeye-monitor:${Versions.GodEye}"
   const val GodEyeMonitorNoOp = "cn.hikyson.godeye:godeye-monitor-no-op:${Versions.GodEye}"
+
+  // 耗时分析
+  // https://github.com/zhengcx/MethodTraceMan
+  const val MethodTraceManPlugin = "gradle.plugin.cn.cxzheng.methodTracePlugin:tracemanplugin:1.0.3"
+  const val MethodTraceManPluginName = "cn.cxzheng.asmtraceman"
+  const val MethodTraceManDebug = "com.github.zhengcx:MethodTraceMan:1.0.6"
+  const val MethodTraceManRelease = "com.github.zhengcx:MethodTraceMan:1.0.6"
 }
 
 /**
