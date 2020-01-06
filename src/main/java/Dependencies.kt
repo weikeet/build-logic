@@ -9,7 +9,7 @@
  */
 
 object Versions {
-  const val Kotlin = "1.3.50"
+  const val Kotlin = "1.3.61"
   const val SupportLib = "28.0.0"
   const val SupportXLib = "1.0.0"
   const val Architecture = "2.1.0"
@@ -143,6 +143,7 @@ object AndroidLibs {
   // Android Support Library Annotations
   // https://mvnrepository.com/artifact/androidx.annotation/annotation
   const val XAnnotation = "androidx.annotation:annotation:1.1.0"
+  const val AndroidXCoreKtx = "androidx.core:core-ktx:1.0.2"
 }
 
 /**
