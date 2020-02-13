@@ -42,7 +42,8 @@ object DepLibs {
   // KotlinLib
   // https://github.com/JetBrains/kotlin
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Kotlin}"
-  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin}"
+  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.Kotlin}"
+  const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin}"
 
   // Tools
   // https://github.com/greenrobot/EventBus
