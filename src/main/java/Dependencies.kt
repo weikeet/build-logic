@@ -11,7 +11,7 @@
 object Versions {
   const val Kotlin = "1.3.61"
   const val SupportLib = "28.0.0"
-  const val SupportXLib = "1.0.0"
+  const val SupportXLib = "1.1.0"
   const val Architecture = "2.1.0"
   const val RoomLib = "2.2.0"
   const val Retrofit = "2.6.2"
@@ -42,8 +42,12 @@ object DepLibs {
   // KotlinLib
   // https://github.com/JetBrains/kotlin
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Kotlin}"
+  // kotlin-stdlib 面向 Java6 及以上版本
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.Kotlin}"
+  // kotlin-stdlib-jdk7 增加了对 JDK7 中某些特性支持
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin}"
+  // kotlin-stdlib-jdk8 增加了对 JDK8 中某些特性支持
+  const val KotlinLib8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.Kotlin}"
 
   // Tools
   // https://github.com/greenrobot/EventBus
@@ -106,12 +110,18 @@ object AndroidLibs {
   // Android Support CardView V7
   // https://mvnrepository.com/artifact/com.android.support/cardview-v7
   const val CardViewV7 = "com.android.support:cardview-v7:${Versions.SupportLib}"
-  // Android Support RecyclerView V7
-  // https://mvnrepository.com/artifact/com.android.support/recyclerview-v7
-  const val RecyclerViewV7 = "com.android.support:recyclerview-v7:${Versions.SupportLib}"
   // Android Support Custom Tabs
   // https://mvnrepository.com/artifact/com.android.support/customtabs
   const val CustomTabs = "com.android.support:customtabs:${Versions.SupportLib}"
+  // Android Support RecyclerView V7
+  // https://mvnrepository.com/artifact/com.android.support/recyclerview-v7
+  const val RecyclerViewV7 = "com.android.support:recyclerview-v7:${Versions.SupportLib}"
+  // vector drawable
+  // https://mvnrepository.com/artifact/com.android.support/support-vector-drawable
+  const val SupportVectorDrawable = "com.android.support:support-vector-drawable:${Versions.SupportLib}"
+  // animated vector drawable
+  // https://mvnrepository.com/artifact/com.android.support/animated-vector-drawable
+  const val SupportAnimatedVectorDrawable = "com.android.support:animated-vector-drawable':${Versions.SupportLib}"
   // Android Support Library Annotations
   // https://mvnrepository.com/artifact/com.android.support/support-annotations
   const val SupportAnnotations = "com.android.support:support-annotations:${Versions.SupportLib}"
@@ -122,29 +132,38 @@ object AndroidLibs {
   // Android X
   // Android AppCompat Library V7
   // https://mvnrepository.com/artifact/androidx.appcompat/appcompat
-  const val XAppCompat = "androidx.appcompat:appcompat:1.1.0"
+  const val XAppCompat = "androidx.appcompat:appcompat:${Versions.SupportXLib}"
   // Legacy Support V4
   // https://mvnrepository.com/artifact/androidx.legacy/legacy-support-v4
-  const val XSupportV4 = "androidx.legacy:legacy-support-v4:${Versions.SupportXLib}"
+  const val XSupportV4 = "androidx.legacy:legacy-support-v4:1.0.0"
   // Material Design
   // https://mvnrepository.com/artifact/com.google.android.material/material
-  const val XMaterialDesign = "com.google.android.material:material:${Versions.SupportXLib}"
+  const val XMaterialDesign = "com.google.android.material:material:1.0.0"
   // Android Support CardView V7
   // https://mvnrepository.com/artifact/androidx.cardview/cardview
-  const val XCardView = "androidx.cardview:cardview:${Versions.SupportXLib}"
+  const val XCardView = "androidx.cardview:cardview:1.0.0"
+  // Android Support Custom Tabs
+  // https://mvnrepository.com/artifact/androidx.browser/browser
+  const val XCustomTabs = "androidx.browser:browser:1.2.0"
   // Android Support RecyclerView V7
   // https://mvnrepository.com/artifact/androidx.recyclerview/recyclerview
   const val XRecyclerView = "androidx.recyclerview:recyclerview:${Versions.SupportXLib}"
-  // Android Support Custom Tabs
-  // https://mvnrepository.com/artifact/androidx.browser/browser
-  const val XCustomTabs = "androidx.browser:browser:${Versions.SupportXLib}"
+  // Vector drawable
+  // https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable
+  const val XSupportVectorDrawable = "androidx.vectordrawable:vectordrawable:${Versions.SupportXLib}"
+  // Animated vector drawable
+  // https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable-animated
+  const val XSupportAnimatedVectorDrawable = "androidx.vectordrawable:vectordrawable-animated':${Versions.SupportXLib}"
+  // Android Support Library Annotations
+  // https://mvnrepository.com/artifact/androidx.annotation/annotation
+  const val XAnnotation = "androidx.annotation:annotation:${Versions.SupportXLib}"
   // Android ConstraintLayout
   // https://mvnrepository.com/artifact/androidx.constraintlayout/constraintlayout
   const val XConstraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
-  // Android Support Library Annotations
-  // https://mvnrepository.com/artifact/androidx.annotation/annotation
-  const val XAnnotation = "androidx.annotation:annotation:1.1.0"
-  const val AndroidXCoreKtx = "androidx.core:core-ktx:1.0.2"
+
+  // Kotlin extensions for 'core'
+  // https://mvnrepository.com/artifact/androidx.core/core-ktx
+  const val AndroidXCoreKtx = "androidx.core:core-ktx:1.2.0"
 }
 
 /**
