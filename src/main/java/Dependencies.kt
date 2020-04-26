@@ -9,53 +9,42 @@
  */
 
 object Versions {
-  const val Kotlin = "1.3.71"
-  const val SupportLib = "28.0.0"
-  const val SupportXLib = "1.1.0"
-  const val Architecture = "2.2.0"
-  const val RoomLib = "2.2.5"
-  const val Retrofit = "2.8.1"
-  const val OkHttp = "4.5.0"
-  const val Dagger2 = "2.19"
-  const val Glide = "4.9.0"
-  const val GreenDao = "3.2.2"
-  const val LeakCanary = "2.2"
-  const val Espresso = "3.0.2"
-  const val Tinker = "1.9.1"
-  const val Stetho = "1.5.0"
+  const val minSdkVersion = 21
+  const val targetSdkVersion = 29
+  const val compileSdkVersion = 29
+  const val buildToolsVersion = "29.0.3"
 }
 
 object DepLibs {
   // Plugin
   // CheckOn 20200408 https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
-  const val AndroidPlugin = "com.android.tools.build:gradle:3.6.2"
-
+  const val AndroidPlugin = "com.android.tools.build:gradle:3.6.3"
 
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.17"
 
-
   // KotlinLib
   // CheckOn 20200408 https://github.com/JetBrains/kotlin
-  const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Kotlin}"
+  private const val KotlinVer = "1.3.71"
+  const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
 
   // kotlin-stdlib 面向 Java6 及以上版本
-  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.Kotlin}"
+  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}"
 
   // kotlin-stdlib-jdk7 增加了对 JDK7 中某些特性支持
-  const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin}"
+  const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}"
 
   // kotlin-stdlib-jdk8 增加了对 JDK8 中某些特性支持
-  const val KotlinLib8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.Kotlin}"
-
+  const val KotlinLib8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KotlinVer}"
 
   // Tools
   // CheckOn 20200408 https://github.com/greenrobot/EventBus
   const val EventBus = "org.greenrobot:eventbus:3.2.0"
 
   // https://github.com/greenrobot/greenDAO
-  const val GreenDaoPlugin = "org.greenrobot:greendao-gradle-plugin:${Versions.GreenDao}"
-  const val GreenDao = "org.greenrobot:greendao:${Versions.GreenDao}"
+  private const val GreenDaoVer = "3.2.2"
+  const val GreenDaoPlugin = "org.greenrobot:greendao-gradle-plugin:${GreenDaoVer}"
+  const val GreenDao = "org.greenrobot:greendao:${GreenDaoVer}"
 
   // CheckOn 20200408 https://github.com/google/gson
   const val Gson = "com.google.code.gson:gson:2.8.6"
@@ -63,14 +52,16 @@ object DepLibs {
   // https://github.com/jhy/jsoup
   const val Jsoup = "org.jsoup:jsoup:1.11.3"
 
-  // https://github.com/alibaba/ARouter
-  const val Arouter = "com.alibaba:arouter-api:1.3.1"
-  const val ArouterCompiler = "com.alibaba:arouter-compiler:1.1.4"
+  // CheckOn 20200426 https://github.com/alibaba/ARouter
+  const val Arouter = "com.alibaba:arouter-api:1.5.0"
+  const val ArouterCompiler = "com.alibaba:arouter-compiler:1.2.2"
+  const val ArouterPlugin = "com.alibaba:arouter-register:1.0.2"
 
   // https://github.com/Tencent/tinker
-  const val TinkerPlugin = "com.tencent.tinker:tinker-patch-gradle-plugin:${Versions.Tinker}"
-  const val TinkerLib = "com.tencent.tinker:tinker-android-lib:${Versions.Tinker}"
-  const val TinkerAnno = "com.tencent.tinker:tinker-android-anno:${Versions.Tinker}"
+  private const val TinkerVer = "1.9.1"
+  const val TinkerPlugin = "com.tencent.tinker:tinker-patch-gradle-plugin:${TinkerVer}"
+  const val TinkerLib = "com.tencent.tinker:tinker-android-lib:${TinkerVer}"
+  const val TinkerAnno = "com.tencent.tinker:tinker-android-anno:${TinkerVer}"
 
   // https://github.com/bilibili/ijkplayer
   private const val IjkPlayerVer = "0.8.8"
@@ -94,11 +85,12 @@ object DepLibs {
   // read smsVerifyCode https://github.com/stfalcon-studio/SmsVerifyCatcher
   const val SmsVerifyCode = "https://github.com/stfalcon-studio/SmsVerifyCatcher"
 
-  const val Dagger2 = "com.google.dagger:dagger:${Versions.Dagger2}"
-  const val Dagger2Android = "com.google.dagger:dagger-android:${Versions.Dagger2}"
-  const val Dagger2Compiler = "com.google.dagger:dagger-compiler:${Versions.Dagger2}"
-  const val Dagger2AndroidSupport = "com.google.dagger:dagger-android-support:${Versions.Dagger2}"
-  const val Dagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.Dagger2}"
+  private const val Dagger2Ver = "2.19"
+  const val Dagger2 = "com.google.dagger:dagger:${Dagger2Ver}"
+  const val Dagger2Android = "com.google.dagger:dagger-android:${Dagger2Ver}"
+  const val Dagger2Compiler = "com.google.dagger:dagger-compiler:${Dagger2Ver}"
+  const val Dagger2AndroidSupport = "com.google.dagger:dagger-android-support:${Dagger2Ver}"
+  const val Dagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:${Dagger2Ver}"
 
   const val Multidex = "com.android.support:multidex:1.0.3"
   const val JavaxAnnotation = "javax.annotation:jsr250-api:1.0"
@@ -109,166 +101,178 @@ object DepLibs {
  * Latest update: 2019.10.17
  */
 object AndroidLibs {
+  const val SupportLibVer = "28.0.0"
+
   // Android AppCompat Library V7
   // https://mvnrepository.com/artifact/com.android.support/appcompat-v7
-  const val AppcompatV7 = "com.android.support:appcompat-v7:${Versions.SupportLib}"
+  const val AppcompatV7 = "com.android.support:appcompat-v7:${SupportLibVer}"
 
   // Material Components For Android
   // https://mvnrepository.com/artifact/com.android.support/design
-  const val MaterialDesign = "com.android.support:design:${Versions.SupportLib}"
+  const val MaterialDesign = "com.android.support:design:${SupportLibVer}"
 
   // Android Support Library V4
   // https://mvnrepository.com/artifact/com.android.support/support-v4
-  const val SupportV4 = "com.android.support:support-v4:${Versions.SupportLib}"
+  const val SupportV4 = "com.android.support:support-v4:${SupportLibVer}"
 
   // Android Support CardView V7
   // https://mvnrepository.com/artifact/com.android.support/cardview-v7
-  const val CardViewV7 = "com.android.support:cardview-v7:${Versions.SupportLib}"
+  const val CardViewV7 = "com.android.support:cardview-v7:${SupportLibVer}"
 
   // Android Support Custom Tabs
   // https://mvnrepository.com/artifact/com.android.support/customtabs
-  const val CustomTabs = "com.android.support:customtabs:${Versions.SupportLib}"
+  const val CustomTabs = "com.android.support:customtabs:${SupportLibVer}"
 
   // Android Support RecyclerView V7
   // https://mvnrepository.com/artifact/com.android.support/recyclerview-v7
-  const val RecyclerViewV7 = "com.android.support:recyclerview-v7:${Versions.SupportLib}"
+  const val RecyclerViewV7 = "com.android.support:recyclerview-v7:${SupportLibVer}"
 
   // vector drawable
   // https://mvnrepository.com/artifact/com.android.support/support-vector-drawable
-  const val SupportVectorDrawable = "com.android.support:support-vector-drawable:${Versions.SupportLib}"
+  const val SupportVectorDrawable = "com.android.support:support-vector-drawable:${SupportLibVer}"
 
   // animated vector drawable
   // https://mvnrepository.com/artifact/com.android.support/animated-vector-drawable
-  const val SupportAnimatedVectorDrawable = "com.android.support:animated-vector-drawable':${Versions.SupportLib}"
+  const val SupportAnimatedVectorDrawable = "com.android.support:animated-vector-drawable':${SupportLibVer}"
 
   // Android Support Library Annotations
   // https://mvnrepository.com/artifact/com.android.support/support-annotations
-  const val SupportAnnotations = "com.android.support:support-annotations:${Versions.SupportLib}"
+  const val SupportAnnotations = "com.android.support:support-annotations:${SupportLibVer}"
 
   // Android ConstraintLayout
   // https://mvnrepository.com/artifact/com.android.support.constraint/constraint-layout
   const val ConstraintLayout = "com.android.support.constraint:constraint-layout:1.1.3"
+}
 
-  // Android X
+/**
+ * Desc: Android X library
+ * Latest update: 2020.04.24
+ */
+object AndroidXLibs {
+  const val SupportXLibVer = "1.1.0"
+
   // Android AppCompat Library V7
   // https://mvnrepository.com/artifact/androidx.appcompat/appcompat
-  const val XAppCompat = "androidx.appcompat:appcompat:${Versions.SupportXLib}"
+  const val AppCompat = "androidx.appcompat:appcompat:${SupportXLibVer}"
 
   // Legacy Support V4
   // https://mvnrepository.com/artifact/androidx.legacy/legacy-support-v4
-  const val XSupportV4 = "androidx.legacy:legacy-support-v4:1.0.0"
+  const val SupportV4 = "androidx.legacy:legacy-support-v4:1.0.0"
 
   // Material Design
   // https://mvnrepository.com/artifact/com.google.android.material/material
-  const val XMaterialDesign = "com.google.android.material:material:1.0.0"
+  const val MaterialDesign = "com.google.android.material:material:1.0.0"
 
   // Android Support CardView V7
   // https://mvnrepository.com/artifact/androidx.cardview/cardview
-  const val XCardView = "androidx.cardview:cardview:1.0.0"
+  const val CardView = "androidx.cardview:cardview:1.0.0"
 
   // Android Support Custom Tabs
   // https://mvnrepository.com/artifact/androidx.browser/browser
-  const val XCustomTabs = "androidx.browser:browser:1.2.0"
+  const val CustomTabs = "androidx.browser:browser:1.2.0"
 
   // Android Support RecyclerView V7
   // https://mvnrepository.com/artifact/androidx.recyclerview/recyclerview
-  const val XRecyclerView = "androidx.recyclerview:recyclerview:${Versions.SupportXLib}"
+  const val RecyclerView = "androidx.recyclerview:recyclerview:${SupportXLibVer}"
 
   // Vector drawable
   // https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable
-  const val XSupportVectorDrawable = "androidx.vectordrawable:vectordrawable:${Versions.SupportXLib}"
+  const val SupportVectorDrawable = "androidx.vectordrawable:vectordrawable:${SupportXLibVer}"
 
   // Animated vector drawable
   // https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable-animated
-  const val XSupportAnimatedVectorDrawable = "androidx.vectordrawable:vectordrawable-animated':${Versions.SupportXLib}"
+  const val SupportAnimatedVectorDrawable = "androidx.vectordrawable:vectordrawable-animated':${SupportXLibVer}"
 
   // Android Support Library Annotations
   // https://mvnrepository.com/artifact/androidx.annotation/annotation
-  const val XAnnotation = "androidx.annotation:annotation:${Versions.SupportXLib}"
+  const val Annotation = "androidx.annotation:annotation:${SupportXLibVer}"
 
   // Android ConstraintLayout
   // https://mvnrepository.com/artifact/androidx.constraintlayout/constraintlayout
-  const val XConstraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+  const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
 
   // Kotlin extensions for 'core'
   // https://mvnrepository.com/artifact/androidx.core/core-ktx
-  const val AndroidXCoreKtx = "androidx.core:core-ktx:1.2.0"
+  const val AndroidCoreKtx = "androidx.core:core-ktx:1.2.0"
 }
 
 /**
  * Desc: Google official architecture
  * Url: https://developer.android.com/topic/libraries/architecture/index.html
- * Latest update: 2019.10.17
+ * Latest update: 2020.04.24
  */
 object ArchitectureLibs {
+  private const val ArchitectureVer = "2.2.0"
+
   // CheckOn 20200408 Android Lifecycle Runtime
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-runtime
-  const val LifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${Versions.Architecture}"
+  const val LifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${ArchitectureVer}"
 
   // Android Lifecycle Extensions
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-extensions
-  const val LifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.Architecture}"
+  const val LifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${ArchitectureVer}"
 
   // Android Lifecycle LiveData
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata
-  const val LifecycleLiveData = "androidx.lifecycle:lifecycle-livedata:${Versions.Architecture}"
+  const val LifecycleLiveData = "androidx.lifecycle:lifecycle-livedata:${ArchitectureVer}"
 
   // Android Lifecycle ViewModel
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel
-  const val LifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel:${Versions.Architecture}"
+  const val LifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel:${ArchitectureVer}"
 
   // Android Lifecycle Common
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common
-  const val LifecycleCommon = "androidx.lifecycle:lifecycle-common:${Versions.Architecture}"
+  const val LifecycleCommon = "androidx.lifecycle:lifecycle-common:${ArchitectureVer}"
 
   // Android Lifecycle Compiler
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-compiler
-  const val LifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.Architecture}"
+  const val LifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${ArchitectureVer}"
 
   // Android Lifecycle Process
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-process
-  const val LifecycleProcess = "androidx.lifecycle:lifecycle-process:${Versions.Architecture}"
+  const val LifecycleProcess = "androidx.lifecycle:lifecycle-process:${ArchitectureVer}"
 
   // Android Lifecycle Service
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-service
-  const val LifecycleService = "androidx.lifecycle:lifecycle-service:${Versions.Architecture}"
+  const val LifecycleService = "androidx.lifecycle:lifecycle-service:${ArchitectureVer}"
 
 
   // Android Lifecycle Kotlin Extensions
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-runtime-ktx
-  const val LifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.Architecture}"
+  const val LifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${ArchitectureVer}"
 
   // LiveData Kotlin Extensions
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-ktx
-  const val LifecycleLiveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.Architecture}"
+  const val LifecycleLiveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${ArchitectureVer}"
 
   // LiveData Core Kotlin Extensions
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-core-ktx
-  const val LifecycleLiveDataCoreKtx = "androidx.lifecycle:lifecycle-livedata-core-ktx:${Versions.Architecture}"
+  const val LifecycleLiveDataCoreKtx = "androidx.lifecycle:lifecycle-livedata-core-ktx:${ArchitectureVer}"
 
   // Android Lifecycle ViewModel Kotlin Extensions
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel-ktx
-  const val LifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Architecture}"
+  const val LifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${ArchitectureVer}"
 
   // CheckOn 20200408 Android Room Runtime
   // https://mvnrepository.com/artifact/androidx.room/room-runtime
-  const val RoomRuntime = "androidx.room:room-runtime:${Versions.RoomLib}"
+  private const val RoomLibVer = "2.2.5"
+  const val RoomRuntime = "androidx.room:room-runtime:${RoomLibVer}"
 
   // Android Room RXJava2
   // https://mvnrepository.com/artifact/androidx.room/room-rxjava2
-  const val RoomRxJava2 = "androidx.room:room-rxjava2:${Versions.RoomLib}"
+  const val RoomRxJava2 = "androidx.room:room-rxjava2:${RoomLibVer}"
 
   // Android Room Compiler
   // https://mvnrepository.com/artifact/androidx.room/room-compiler
-  const val RoomCompiler = "androidx.room:room-compiler:${Versions.RoomLib}"
+  const val RoomCompiler = "androidx.room:room-compiler:${RoomLibVer}"
 
   // Android Room Common
   // https://mvnrepository.com/artifact/androidx.room/room-common
-  const val RoomCommon = "androidx.room:room-common:${Versions.RoomLib}"
+  const val RoomCommon = "androidx.room:room-common:${RoomLibVer}"
 
   // Android Room Kotlin Extensions
   // https://mvnrepository.com/artifact/androidx.room/room-ktx
-  const val RoomKtx = "androidx.room:room-ktx:${Versions.RoomLib}"
+  const val RoomKtx = "androidx.room:room-ktx:${RoomLibVer}"
 }
 
 /**
@@ -278,26 +282,28 @@ object ArchitectureLibs {
 object NetworkLibs {
   // CheckOn 20200408 https://github.com/square/retrofit
   // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
-  const val Retrofit = "com.squareup.retrofit2:retrofit:${Versions.Retrofit}"
+  private const val RetrofitVer = "2.8.1"
+  const val Retrofit = "com.squareup.retrofit2:retrofit:${RetrofitVer}"
 
   // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
-  const val RetrofitConverterGson = "com.squareup.retrofit2:converter-gson:${Versions.Retrofit}"
+  const val RetrofitConverterGson = "com.squareup.retrofit2:converter-gson:${RetrofitVer}"
 
   // https://mvnrepository.com/artifact/com.squareup.retrofit2/adapter-rxjava2
-  const val RetrofitAdapterRxJava2 = "com.squareup.retrofit2:adapter-rxjava2:${Versions.Retrofit}"
+  const val RetrofitAdapterRxJava2 = "com.squareup.retrofit2:adapter-rxjava2:${RetrofitVer}"
 
   // OkHttp
   // CheckOn 20200408 https://github.com/square/okhttp
   // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
-  const val OkHttp3 = "com.squareup.okhttp3:okhttp:${Versions.OkHttp}"
+  private const val OkHttpVer = "4.5.0"
+  const val OkHttp3 = "com.squareup.okhttp3:okhttp:${OkHttpVer}"
 
   // OkHttp URLConnection
   // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp-urlconnection
-  const val OkHttp3UrlConnection = "com.squareup.okhttp3:okhttp-urlconnection:${Versions.OkHttp}"
+  const val OkHttp3UrlConnection = "com.squareup.okhttp3:okhttp-urlconnection:${OkHttpVer}"
 
   // OkHttp Logging Interceptor
   // https://mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor
-  const val OkHttp3LoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.OkHttp}"
+  const val OkHttp3LoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${OkHttpVer}"
 }
 
 /**
@@ -384,9 +390,10 @@ object RxLibs {
 object ImageLoaderLibs {
   // https://github.com/bumptech/glide
   // https://mvnrepository.com/artifact/com.github.bumptech.glide
-  const val Glide = "com.github.bumptech.glide:glide:${Versions.Glide}"
-  const val GlideCompiler = "com.github.bumptech.glide:compiler:${Versions.Glide}"
-  const val GlideLoaderOkHttp3 = "com.github.bumptech.glide:okhttp3-integration:${Versions.Glide}"
+  private const val GlideVer = "4.9.0"
+  const val Glide = "com.github.bumptech.glide:glide:${GlideVer}"
+  const val GlideCompiler = "com.github.bumptech.glide:compiler:${GlideVer}"
+  const val GlideLoaderOkHttp3 = "com.github.bumptech.glide:okhttp3-integration:${GlideVer}"
 
   // https://github.com/square/picasso
   // https://mvnrepository.com/artifact/com.squareup.picasso/picasso
@@ -409,17 +416,19 @@ object AnalyticLibs {
   const val UmengAnalytics = "com.umeng.analytics:analytics:6.0.1"
 
   // CheckOn 20200408 https://github.com/square/leakcanary
-  const val LeakCanaryDebug = "com.squareup.leakcanary:leakcanary-android:${Versions.LeakCanary}"
-  const val LeakCanaryRelease = "com.squareup.leakcanary:leakcanary-android-no-op:${Versions.LeakCanary}"
+  private const val LeakCanaryVer = "2.2"
+  const val LeakCanaryDebug = "com.squareup.leakcanary:leakcanary-android:${LeakCanaryVer}"
+  const val LeakCanaryRelease = "com.squareup.leakcanary:leakcanary-android-no-op:${LeakCanaryVer}"
 
   // Debug bridge
   // https://github.com/facebook/stetho
-  const val Stetho = "com.facebook.stetho:stetho:${Versions.Stetho}"
-  const val StethoOkHttp3 = "com.facebook.stetho:stetho-okhttp3:${Versions.Stetho}"
+  private const val StethoVer = "1.5.0"
+  const val Stetho = "com.facebook.stetho:stetho:${StethoVer}"
+  const val StethoOkHttp3 = "com.facebook.stetho:stetho-okhttp3:${StethoVer}"
 
   // 性能检测
   // https://github.com/Kyson/AndroidGodEye
-  private const val GodEyeVer = "2.3.5"
+  private const val GodEyeVer = "3.1.2"
   const val GodEyeCore = "cn.hikyson.godeye:godeye-core:${GodEyeVer}"
   const val GodEyeToolBox = "cn.hikyson.godeye:godeye-toolbox:${GodEyeVer}"
   const val GodEyeMonitor = "cn.hikyson.godeye:godeye-monitor:${GodEyeVer}"
@@ -706,7 +715,8 @@ object TestLibs {
 
   // Android Support Test Espresso
   // https://mvnrepository.com/artifact/com.android.support.test.espresso
-  const val EspressoCore = "com.android.support.test.espresso:espresso-core:${Versions.Espresso}"
-  const val EspressoContrib = "com.android.support.test.espresso:espresso-contrib:${Versions.Espresso}"
-  const val EspressoIntents = "com.android.support.test.espresso:espresso-intents:${Versions.Espresso}"
+  private const val EspressoVer = "3.0.2"
+  const val EspressoCore = "com.android.support.test.espresso:espresso-core:${EspressoVer}"
+  const val EspressoContrib = "com.android.support.test.espresso:espresso-contrib:${EspressoVer}"
+  const val EspressoIntents = "com.android.support.test.espresso:espresso-intents:${EspressoVer}"
 }
