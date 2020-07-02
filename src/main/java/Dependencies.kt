@@ -18,14 +18,14 @@ object Versions {
 object DepLibs {
   // Plugin
   // CheckOn 20200408 https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
-  const val AndroidPlugin = "com.android.tools.build:gradle:3.6.3"
+  const val AndroidPlugin = "com.android.tools.build:gradle:4.0.0"
 
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.17"
 
   // KotlinLib
   // CheckOn 20200408 https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.3.71"
+  private const val KotlinVer = "1.3.72"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
 
   // kotlin-stdlib 面向 Java6 及以上版本
@@ -193,7 +193,7 @@ object AndroidXLibs {
 
   // Kotlin extensions for 'core'
   // https://mvnrepository.com/artifact/androidx.core/core-ktx
-  const val AndroidCoreKtx = "androidx.core:core-ktx:1.2.0"
+  const val AndroidCoreKtx = "androidx.core:core-ktx:1.3.0"
 }
 
 /**
