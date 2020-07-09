@@ -29,12 +29,10 @@ object DepLibs {
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
 
   // kotlin-stdlib 面向 Java6 及以上版本
-  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}"
-
   // kotlin-stdlib-jdk7 增加了对 JDK7 中某些特性支持
-  const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}"
-
   // kotlin-stdlib-jdk8 增加了对 JDK8 中某些特性支持
+  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}"
+  const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}"
   const val KotlinLib8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KotlinVer}"
 
   // Tools
@@ -92,7 +90,7 @@ object DepLibs {
   const val Dagger2AndroidSupport = "com.google.dagger:dagger-android-support:${Dagger2Ver}"
   const val Dagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:${Dagger2Ver}"
 
-  const val Multidex = "com.android.support:multidex:1.0.3"
+  const val MultiDex = "com.android.support:multidex:1.0.3"
   const val JavaxAnnotation = "javax.annotation:jsr250-api:1.0"
 }
 
@@ -101,7 +99,7 @@ object DepLibs {
  * Latest update: 2019.10.17
  */
 object AndroidLibs {
-  const val SupportLibVer = "28.0.0"
+  private const val SupportLibVer = "28.0.0"
 
   // Android AppCompat Library V7
   // https://mvnrepository.com/artifact/com.android.support/appcompat-v7
@@ -146,54 +144,68 @@ object AndroidLibs {
 
 /**
  * Desc: Android X library
- * Latest update: 2020.04.24
+ * Latest update: 2020.07.09
  */
 object AndroidXLibs {
-  const val SupportXLibVer = "1.1.0"
+  private const val SupportXLibVer = "1.1.0"
 
-  // Android AppCompat Library V7
+  // Contains Core Fragment AppCompatResources CursorAdapter DrawerLayout Collection Annotation
   // https://mvnrepository.com/artifact/androidx.appcompat/appcompat
+  // https://mvnrepository.com/artifact/androidx.appcompat/appcompat-resources
   const val AppCompat = "androidx.appcompat:appcompat:${SupportXLibVer}"
+  const val AppCompatResources = "androidx.appcompat:appcompat-resources:${SupportXLibVer}"
 
-  // Legacy Support V4
-  // https://mvnrepository.com/artifact/androidx.legacy/legacy-support-v4
-  const val SupportV4 = "androidx.legacy:legacy-support-v4:1.0.0"
-
-  // Material Design
   // https://mvnrepository.com/artifact/com.google.android.material/material
   const val MaterialDesign = "com.google.android.material:material:1.0.0"
 
-  // Android Support CardView V7
+  // https://mvnrepository.com/artifact/androidx.legacy/legacy-support-v4
+  const val SupportV4 = "androidx.legacy:legacy-support-v4:1.0.0"
+
   // https://mvnrepository.com/artifact/androidx.cardview/cardview
   const val CardView = "androidx.cardview:cardview:1.0.0"
 
-  // Android Support Custom Tabs
   // https://mvnrepository.com/artifact/androidx.browser/browser
   const val CustomTabs = "androidx.browser:browser:1.2.0"
 
-  // Android Support RecyclerView V7
   // https://mvnrepository.com/artifact/androidx.recyclerview/recyclerview
   const val RecyclerView = "androidx.recyclerview:recyclerview:${SupportXLibVer}"
 
-  // Vector drawable
   // https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable
-  const val SupportVectorDrawable = "androidx.vectordrawable:vectordrawable:${SupportXLibVer}"
+  const val VectorDrawable = "androidx.vectordrawable:vectordrawable:${SupportXLibVer}"
 
-  // Animated vector drawable
   // https://mvnrepository.com/artifact/androidx.vectordrawable/vectordrawable-animated
-  const val SupportAnimatedVectorDrawable = "androidx.vectordrawable:vectordrawable-animated':${SupportXLibVer}"
+  const val VectorDrawableAnimated = "androidx.vectordrawable:vectordrawable-animated':${SupportXLibVer}"
 
-  // Android Support Library Annotations
   // https://mvnrepository.com/artifact/androidx.annotation/annotation
   const val Annotation = "androidx.annotation:annotation:${SupportXLibVer}"
 
-  // Android ConstraintLayout
   // https://mvnrepository.com/artifact/androidx.constraintlayout/constraintlayout
   const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
 
-  // Kotlin extensions for 'core'
+  // https://mvnrepository.com/artifact/androidx.core/core
   // https://mvnrepository.com/artifact/androidx.core/core-ktx
-  const val AndroidCoreKtx = "androidx.core:core-ktx:1.3.0"
+  const val Core = "androidx.core:core:1.3.0"
+  const val CoreKtx = "androidx.core:core-ktx:1.3.0"
+
+  // https://mvnrepository.com/artifact/androidx.activity/activity
+  // https://mvnrepository.com/artifact/androidx.activity/activity-ktx
+  const val Activity = "androidx.activity:activity:${SupportXLibVer}"
+  const val ActivityKtx = "androidx.activity:activity-ktx:${SupportXLibVer}"
+
+  // Contains Activity(Ktx) Core(Ktx) ViewModel(Ktx) LiveDataCore(Ktx)
+  // https://mvnrepository.com/artifact/androidx.fragment/fragment
+  // https://mvnrepository.com/artifact/androidx.fragment/fragment-ktx
+  const val Fragment = "androidx.fragment:fragment:${SupportXLibVer}"
+  const val FragmentKtx = "androidx.fragment:fragment-ktx:${SupportXLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.cursoradapter/cursoradapter
+  const val CursorAdapter = "androidx.cursoradapter:cursoradapter:${SupportXLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.drawerlayout/drawerlayout
+  const val DrawerLayout = "androidx.drawerlayout:drawerlayout:${SupportXLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.collection/collection
+  const val Collection = "androidx.collection:${SupportXLibVer}"
 }
 
 /**
@@ -202,77 +214,119 @@ object AndroidXLibs {
  * Latest update: 2020.04.24
  */
 object ArchitectureLibs {
-  private const val ArchitectureVer = "2.2.0"
+  // Lifecycle CheckOn 20200709
+  // Ktx可与Java版本同时依赖，Ktx与Java存在类似功能的单独使用即可
+  private const val LifecycleVer = "2.2.0"
 
-  // CheckOn 20200408 Android Lifecycle Runtime
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-runtime
-  const val LifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${ArchitectureVer}"
-
-  // Android Lifecycle Extensions
+  // @Deprecated 请单独依赖 Runtime/ViewModelLiveData
+  // Contains Lifecycle, ViewModel, LiveData
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-extensions
-  const val LifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${ArchitectureVer}"
+  const val LifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
-  // Android Lifecycle LiveData
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata
-  const val LifecycleLiveData = "androidx.lifecycle:lifecycle-livedata:${ArchitectureVer}"
-
-  // Android Lifecycle ViewModel
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel
-  const val LifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel:${ArchitectureVer}"
-
-  // Android Lifecycle Common
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common
-  const val LifecycleCommon = "androidx.lifecycle:lifecycle-common:${ArchitectureVer}"
-
-  // Android Lifecycle Compiler
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-compiler
-  const val LifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${ArchitectureVer}"
-
-  // Android Lifecycle Process
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-process
-  const val LifecycleProcess = "androidx.lifecycle:lifecycle-process:${ArchitectureVer}"
-
-  // Android Lifecycle Service
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-service
-  const val LifecycleService = "androidx.lifecycle:lifecycle-service:${ArchitectureVer}"
-
-
-  // Android Lifecycle Kotlin Extensions
+  // Only Lifecycle
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-runtime
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-runtime-ktx
-  const val LifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${ArchitectureVer}"
+  const val LifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${LifecycleVer}"
+  const val LifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${LifecycleVer}"
 
-  // LiveData Kotlin Extensions
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-ktx
-  const val LifecycleLiveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${ArchitectureVer}"
-
-  // LiveData Core Kotlin Extensions
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-core-ktx
-  const val LifecycleLiveDataCoreKtx = "androidx.lifecycle:lifecycle-livedata-core-ktx:${ArchitectureVer}"
-
-  // Android Lifecycle ViewModel Kotlin Extensions
+  // Only ViewModel
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel
   // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel-ktx
-  const val LifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${ArchitectureVer}"
+  const val LifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel:${LifecycleVer}"
+  const val LifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${LifecycleVer}"
 
-  // CheckOn 20200408 Android Room Runtime
-  // https://mvnrepository.com/artifact/androidx.room/room-runtime
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel-savedstate
+  const val LifecycleViewModelSaveState = "androidx.lifecycle:lifecycle-viewmodel-savedstate:${LifecycleVer}"
+
+  // Only LiveData (Contains LiveData Core)
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-ktx
+  const val LifecycleLiveData = "androidx.lifecycle:lifecycle-livedata:${LifecycleVer}"
+  const val LifecycleLiveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${LifecycleVer}"
+
+  // Only LiveDataCore
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-core
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-core-ktx
+  const val LifecycleLiveDataCore = "androidx.lifecycle:lifecycle-livedata-core:${LifecycleVer}"
+  const val LifecycleLiveDataCoreKtx = "androidx.lifecycle:lifecycle-livedata-core-ktx:${LifecycleVer}"
+
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common-java8
+  const val LifecycleCommon = "androidx.lifecycle:lifecycle-common:${LifecycleVer}"
+  const val LifecycleCommonJava8 = "androidx.lifecycle:lifecycle-common-java8:${LifecycleVer}"
+
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-compiler
+  const val LifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${LifecycleVer}"
+
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-process
+  const val LifecycleProcess = "androidx.lifecycle:lifecycle-process:${LifecycleVer}"
+
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-service
+  const val LifecycleService = "androidx.lifecycle:lifecycle-service:${LifecycleVer}"
+
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-reactivestreams
+  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-reactivestreams-ktx
+  const val LifecycleReactiveStreams = "androidx.lifecycle:lifecycle-reactivestreams:${LifecycleVer}"
+  const val LifecycleReactiveStreamsKtx = "androidx.lifecycle:lifecycle-reactivestreams-ktx:${LifecycleVer}"
+
+  // Room CheckOn 20200709
   private const val RoomLibVer = "2.2.5"
+
+  // https://mvnrepository.com/artifact/androidx.room/room-runtime
   const val RoomRuntime = "androidx.room:room-runtime:${RoomLibVer}"
 
-  // Android Room RXJava2
   // https://mvnrepository.com/artifact/androidx.room/room-rxjava2
   const val RoomRxJava2 = "androidx.room:room-rxjava2:${RoomLibVer}"
 
-  // Android Room Compiler
-  // https://mvnrepository.com/artifact/androidx.room/room-compiler
-  const val RoomCompiler = "androidx.room:room-compiler:${RoomLibVer}"
-
-  // Android Room Common
   // https://mvnrepository.com/artifact/androidx.room/room-common
   const val RoomCommon = "androidx.room:room-common:${RoomLibVer}"
 
-  // Android Room Kotlin Extensions
   // https://mvnrepository.com/artifact/androidx.room/room-ktx
   const val RoomKtx = "androidx.room:room-ktx:${RoomLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.room/room-compiler
+  const val RoomCompiler = "androidx.room:room-compiler:${RoomLibVer}"
+
+  // Paging CheckOn 20200709
+  private const val PagingLibVer = "2.1.2"
+
+  // https://mvnrepository.com/artifact/androidx.paging/paging-runtime
+  // https://mvnrepository.com/artifact/androidx.paging/paging-runtime-ktx
+  const val PagingRuntime = "androidx.paging:paging-runtime:${PagingLibVer}"
+  const val PagingRuntimeKtx = "androidx.paging:paging-runtime-ktx:${PagingLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.paging/paging-common
+  // https://mvnrepository.com/artifact/androidx.paging/paging-common-ktx
+  const val PagingCommon = "androidx.paging:paging-common:${PagingLibVer}"
+  const val PagingCommonKtx = "androidx.paging:paging-common-ktx:${PagingLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.paging/paging-rxjava2
+  // https://mvnrepository.com/artifact/androidx.paging/paging-rxjava2-ktx
+  const val PagingRxJava2 = "androidx.paging:paging-rxjava2:${PagingLibVer}"
+  const val PagingRxJava2Ktx = "androidx.paging:paging-rxjava2-ktx:${PagingLibVer}"
+
+  // Navigation CheckOn 20200709
+  private const val NavigationLibVer = "2.3.0"
+
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-fragment
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-fragment-ktx
+  const val NavigationFragment = "androidx.navigation:navigation-fragment:${NavigationLibVer}"
+  const val NavigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${NavigationLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-ui
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-ui-ktx
+  const val NavigationUI = "androidx.navigation:navigation-ui:${NavigationLibVer}"
+  const val NavigationUIKtx = "androidx.navigation:navigation-ui-ktx:${NavigationLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-runtime
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-runtime-ktx
+  const val NavigationRuntime = "androidx.navigation:navigation-runtime:${NavigationLibVer}"
+  const val NavigationRuntimeKtx = "androidx.navigation:navigation-runtime-ktx:${NavigationLibVer}"
+
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-common
+  // https://mvnrepository.com/artifact/androidx.navigation/navigation-common-ktx
+  const val NavigationCommon = "androidx.navigation:navigation-common:${NavigationLibVer}"
+  const val NavigationCommonKtx = "androidx.navigation:navigation-common-ktx:${NavigationLibVer}"
 }
 
 /**
