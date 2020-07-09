@@ -39,21 +39,16 @@ object DepLibs {
   // CheckOn 20200408 https://github.com/greenrobot/EventBus
   const val EventBus = "org.greenrobot:eventbus:3.2.0"
 
-  // https://github.com/greenrobot/greenDAO
-  private const val GreenDaoVer = "3.2.2"
-  const val GreenDaoPlugin = "org.greenrobot:greendao-gradle-plugin:${GreenDaoVer}"
-  const val GreenDao = "org.greenrobot:greendao:${GreenDaoVer}"
-
   // CheckOn 20200408 https://github.com/google/gson
   const val Gson = "com.google.code.gson:gson:2.8.6"
 
   // https://github.com/jhy/jsoup
-  const val Jsoup = "org.jsoup:jsoup:1.11.3"
+  const val JSoup = "org.jsoup:jsoup:1.11.3"
 
   // CheckOn 20200426 https://github.com/alibaba/ARouter
-  const val Arouter = "com.alibaba:arouter-api:1.5.0"
-  const val ArouterCompiler = "com.alibaba:arouter-compiler:1.2.2"
-  const val ArouterPlugin = "com.alibaba:arouter-register:1.0.2"
+  const val ARouter = "com.alibaba:arouter-api:1.5.0"
+  const val ARouterCompiler = "com.alibaba:arouter-compiler:1.2.2"
+  const val ARouterPlugin = "com.alibaba:arouter-register:1.0.2"
 
   // https://github.com/Tencent/tinker
   private const val TinkerVer = "1.9.1"
