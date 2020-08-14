@@ -399,6 +399,10 @@ object WidgetLibs {
   // https://github.com/hdodenhof/CircleImageView
   const val CircleImageView = "de.hdodenhof:circleimageview:3.1.0"
 
+  // CheckOn 20200814 PhotoView
+  // https://github.com/chrisbanes/PhotoView
+  const val PhotoView = "com.github.chrisbanes:PhotoView:2.3.0"
+
   // CheckOn 20200814 ImmersionBar
   // https://github.com/gyf-dev/ImmersionBar
   const val ImmersionBar = "com.gyf.immersionbar:immersionbar:3.0.0"
