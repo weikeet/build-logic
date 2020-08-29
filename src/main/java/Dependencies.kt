@@ -26,7 +26,7 @@ object DepLibs {
 
   // CheckOn 20200814 KotlinLib
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.3.72"
+  private const val KotlinVer = "1.4.0"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
@@ -76,25 +76,6 @@ object DepLibs {
 }
 
 /**
- * Desc: Android library
- * https://mvnrepository.com/artifact/com.android.support
- */
-@Deprecated("UseAndroidX")
-object AndroidLibs {
-  private const val SupportLibVer = "28.0.0"
-  const val AppcompatV7 = "com.android.support:appcompat-v7:${SupportLibVer}"
-  const val SupportV4 = "com.android.support:support-v4:${SupportLibVer}"
-  const val MaterialDesign = "com.android.support:design:${SupportLibVer}"
-  const val CustomTabs = "com.android.support:customtabs:${SupportLibVer}"
-  const val CardViewV7 = "com.android.support:cardview-v7:${SupportLibVer}"
-  const val RecyclerViewV7 = "com.android.support:recyclerview-v7:${SupportLibVer}"
-  const val SupportVectorDrawable = "com.android.support:support-vector-drawable:${SupportLibVer}"
-  const val SupportAnimatedVectorDrawable = "com.android.support:animated-vector-drawable':${SupportLibVer}"
-  const val SupportAnnotations = "com.android.support:support-annotations:${SupportLibVer}"
-  const val ConstraintLayout = "com.android.support.constraint:constraint-layout:1.1.3"
-}
-
-/**
  * Desc: Android X library
  */
 object AndroidXLibs {
@@ -102,8 +83,8 @@ object AndroidXLibs {
 
   // Contains Core Fragment AppCompatResources CursorAdapter DrawerLayout Collection Annotation
   // https://mvnrepository.com/artifact/androidx.appcompat/
-  const val AppCompat = "androidx.appcompat:appcompat:${SupportXLibVer}"
-  const val AppCompatResources = "androidx.appcompat:appcompat-resources:${SupportXLibVer}"
+  const val AppCompat = "androidx.appcompat:appcompat:1.2.0"
+  const val AppCompatResources = "androidx.appcompat:appcompat-resources:1.2.0"
 
   // https://mvnrepository.com/artifact/com.google.android.material/material
   const val MaterialDesign = "com.google.android.material:material:1.2.0"
@@ -130,7 +111,7 @@ object AndroidXLibs {
   const val Annotation = "androidx.annotation:annotation:${SupportXLibVer}"
 
   // https://mvnrepository.com/artifact/androidx.constraintlayout/constraintlayout
-  const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+  const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.0.1"
 
   // https://mvnrepository.com/artifact/androidx.core/core
   // https://mvnrepository.com/artifact/androidx.core/core-ktx
