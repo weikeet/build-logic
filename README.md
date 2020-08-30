@@ -1,16 +1,15 @@
 ## 使用Kotlin管理Gadle依赖
 
-> - 原文地址：[Kotlin + buildSrc for Better Gradle Dependency Management](https://link.juejin.im/?target=https%3A%2F%2Fhandstandsam.com%2F2018%2F02%2F11%2Fkotlin-buildsrc-for-better-gradle-dependency-management%2F)
-> - 原文作者：[Sam Edwards，Lead Android Engineer at Google Developer Expert for Android](https://link.juejin.im/?target=https%3A%2F%2Fhandstandsam.com%2Fabout-me%2F)
-
 为了充分利用Android Plugin for Gradle 3.0+的优点，将Android项目拆分成多个module的做法越来越常见。然而，随着module数量的增多，我们很快就会遇到依赖管理的混乱问题。
 
 ### 管理Gradle依赖的三种不同方法
+
 1. 手动管理
-2. 使用Google推荐的“ext”
+2. 使用Google推荐的`ext`
 3. **Kotlin + buildSrc**
 
 ### 1. 手动管理
+
 这是一种大多数人在采用的管理依赖的方法，但每次升级依赖库时都需要做大量的手动更改
 
 **module_a/build.gradle ** 和 **module_b/build.gradle**
@@ -26,7 +25,8 @@ implementation "io.reactivex.rxjava2:rxjava:2.2.3"
 这里存在许多重复的配置，而且当你的项目有很多module时很难管理依赖库的版本更新
 
 ### 2. Google推荐：使用gradle的extra属性
-Google在[Android官方文档](https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.android.com%2Fstudio%2Fbuild%2Fgradle-tips%23configure-project-wide-properties)中推荐这种管理依赖的方法。许多项目例如ButterKnife、Picasso等都在使用这种方法。
+
+Google在[Android官方文档](https://developer.android.com/studio/build/gradle-tips)中推荐这种管理依赖的方法。许多项目例如ButterKnife、Picasso等都在使用这种方法。
 
 此方法非常适用于更新support library的版本，因为每个support library都具有相同的版本号，你只需要在一个地方更改它就行了。 Retrofit等其它第三方库也是如此。
 
@@ -62,6 +62,7 @@ implementation deps.rxJava
 这种方法是手动管理的一大进步，但是缺少IDE的支持，更准确的说是在更新依赖库的时候IDE不能自动补全。
 
 ### 3. Kotlin + buildSrc == Android Studio Autocomplete 😎
+
 ![img](https://user-gold-cdn.xitu.io/2018/5/31/163b57650aacdc7d?imageslim)
 
 **[Gradle文档](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources)**中有这样一段话:
@@ -69,6 +70,7 @@ implementation deps.rxJava
 > 当你运行Gradle时，它会检查项目中是否存在一个名为`buildSrc`的目录。然后Gradle会自动编译并测试这段代码，并将其放入构建脚本的类路径中。您不需要提供任何进一步的操作提示。
 
 **实现步骤：**
+
 1. 在项目**根目录**下新建一个名为**buildSrc**的文件夹(与项目里的app文件夹同级)。
 2. 在**buildSrc**文件夹里创建名为**build.gradle.kts**的文件，文件内容参考之前的描述。
 
@@ -111,7 +113,31 @@ implementation DepLibs.rxjava
 ```
 
 ### 总结
+
 推荐使用**“Kotlin + buildSrc”**的方法。它支持**自动补全和单击跳转**，使得您无需在文件之间手动来回切换，方便你更好的管理Gradle依赖。缺点是：无法知道哪些库已经有新版本了
 
 > - 另外发现目前Android Studio 3.3.x 不支持自动补全和跳转，但是能正常编译通过，Android Studio 3.2.x支持自动补全和跳转，详细可参考 https://github.com/handstandsam/AndroidDependencyManagement/issues/10
 > - 检查新版本库可以参考 https://github.com/handstandsam/AndroidDependencyManagement/issues/6
+
+## 依赖更新检查
+
+```groovy
+apply from: './buildSrc/checkVersions.gradle'
+
+buildscript {
+  ext {
+    kotlin_version = '1.4.0'
+  }
+
+  repositories {
+    google()
+    jcenter()
+  }
+
+  dependencies {
+    classpath "com.android.tools.build:gradle:4.0.1"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    classpath "com.github.ben-manes:gradle-versions-plugin:0.29.0"
+  }
+}
+```

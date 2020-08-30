@@ -24,6 +24,8 @@ object DepLibs {
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.18"
 
+  const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.29.0"
+
   // CheckOn 20200814 KotlinLib
   // https://github.com/JetBrains/kotlin
   private const val KotlinVer = "1.4.0"
@@ -115,8 +117,8 @@ object AndroidXLibs {
 
   // https://mvnrepository.com/artifact/androidx.core/core
   // https://mvnrepository.com/artifact/androidx.core/core-ktx
-  const val Core = "androidx.core:core:1.3.0"
-  const val CoreKtx = "androidx.core:core-ktx:1.3.0"
+  const val Core = "androidx.core:core:1.3.1"
+  const val CoreKtx = "androidx.core:core-ktx:1.3.1"
 
   // https://mvnrepository.com/artifact/androidx.activity/activity
   // https://mvnrepository.com/artifact/androidx.activity/activity-ktx
@@ -288,7 +290,7 @@ object RxLibs {
   // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava
   // https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava
   const val RxJava2 = "io.reactivex.rxjava2:rxjava:2.2.19"
-  const val RxJava3 = "io.reactivex.rxjava3:rxjava:3.0.2"
+  const val RxJava3 = "io.reactivex.rxjava3:rxjava:3.0.6"
 
   // CheckOn 20200814 RxAndroid
   // https://github.com/ReactiveX/RxAndroid
@@ -309,7 +311,7 @@ object RxLibs {
 
   // CheckOn 20200814 RxDownload
   // https://github.com/ssseasonnn/RxDownload
-  private const val RxDownloadVer = "1.0.9"
+  private const val RxDownloadVer = "1.1,2"
   const val RxDownload = "com.github.ssseasonnn:RxDownload:${RxDownloadVer}"
   const val RxDownloads = "com.github.ssseasonnn.RxDownload:rxdownload4:${RxDownloadVer}"
   const val RxDownloadManager = "com.github.ssseasonnn.RxDownload:rxdownload4-manager:${RxDownloadVer}"
