@@ -311,7 +311,7 @@ object RxLibs {
 
   // CheckOn 20200814 RxDownload
   // https://github.com/ssseasonnn/RxDownload
-  private const val RxDownloadVer = "1.1,2"
+  private const val RxDownloadVer = "1.1.2"
   const val RxDownload = "com.github.ssseasonnn:RxDownload:${RxDownloadVer}"
   const val RxDownloads = "com.github.ssseasonnn.RxDownload:rxdownload4:${RxDownloadVer}"
   const val RxDownloadManager = "com.github.ssseasonnn.RxDownload:rxdownload4-manager:${RxDownloadVer}"

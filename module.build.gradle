@@ -1,0 +1,70 @@
+if (isBuildModule.toBoolean()) {
+  apply plugin: 'com.android.application'
+} else {
+  apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion Versions.compileSdkVersion
+  buildToolsVersion Versions.buildToolsVersion
+  defaultConfig {
+    minSdkVersion Versions.minSdkVersion
+    targetSdkVersion Versions.targetSdkVersion
+
+    versionCode 1
+    versionName "1.0"
+
+    consumerProguardFiles 'consumer-rules.pro'
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    javaCompileOptions {
+      annotationProcessorOptions {
+        arguments = [AROUTER_MODULE_NAME: project.getName()]
+      }
+    }
+  }
+
+  buildTypes {
+    debug {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+
+    release {
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  sourceSets {
+    main {
+      //jni库统一放在libs目录下
+      //jniLibs.srcDir = ['libs']
+      if (isBuildModule.toBoolean()) {
+        manifest.srcFile 'src/main/alone/AndroidManifest.xml'
+      } else {
+        manifest.srcFile 'src/main/AndroidManifest.xml'
+        resources {
+          //正式版本移除debug文件夹下的所有调式文件
+          exclude 'src/debug/*'
+        }
+      }
+    }
+  }
+
+  dataBinding {
+    enabled true
+  }
+
+  compileOptions {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+  }
+
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+}
