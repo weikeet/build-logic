@@ -24,7 +24,7 @@ object DepLibs {
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.18"
 
-  const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.29.0"
+  const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.36.0"
 
   // CheckOn 20200814 KotlinLib
   // https://github.com/JetBrains/kotlin
@@ -89,7 +89,7 @@ object AndroidXLibs {
   const val AppCompatResources = "androidx.appcompat:appcompat-resources:1.2.0"
 
   // https://mvnrepository.com/artifact/com.google.android.material/material
-  const val MaterialDesign = "com.google.android.material:material:1.2.0"
+  const val MaterialDesign = "com.google.android.material:material:1.2.1"
 
   // https://mvnrepository.com/artifact/androidx.legacy/legacy-support-v4
   const val SupportV4 = "androidx.legacy:legacy-support-v4:1.0.0"
@@ -113,7 +113,7 @@ object AndroidXLibs {
   const val Annotation = "androidx.annotation:annotation:${SupportXLibVer}"
 
   // https://mvnrepository.com/artifact/androidx.constraintlayout/constraintlayout
-  const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.0.1"
+  const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
 
   // https://mvnrepository.com/artifact/androidx.core/core
   // https://mvnrepository.com/artifact/androidx.core/core-ktx
@@ -390,6 +390,7 @@ object WidgetLibs {
   // https://github.com/gyf-dev/ImmersionBar
   const val ImmersionBar = "com.gyf.immersionbar:immersionbar:3.0.0"
   const val ImmersionBarKtx = "com.gyf.immersionbar:immersionbar-ktx:3.0.0"
+  const val ImmersionBarFragment = "com.gyf.immersionbar:immersionbar-components:3.0.0"
 
   // CheckOn 20200814 BaseRecyclerViewAdapterHelper
   // https://github.com/CymChad/BaseRecyclerViewAdapterHelper

@@ -1,4 +1,4 @@
-## 使用Kotlin管理Gadle依赖
+## 使用Kotlin管理Gradle依赖
 
 为了充分利用Android Plugin for Gradle 3.0+的优点，将Android项目拆分成多个module的做法越来越常见。然而，随着module数量的增多，我们很快就会遇到依赖管理的混乱问题。
 
@@ -12,7 +12,7 @@
 
 这是一种大多数人在采用的管理依赖的方法，但每次升级依赖库时都需要做大量的手动更改
 
-**module_a/build.gradle ** 和 **module_b/build.gradle**
+**module_a/build.gradle** 和 **module_b/build.gradle**
 
 ```groovy
 implementation "com.android.support:support-annotations:28.0.0"
@@ -39,7 +39,7 @@ ext {
     retrofit: "2.4.0",
     rxJava: "2.2.3"
   ]
-  deps = [
+  dep = [
     supportAnnotations: "com.android.support:support-annotations:${versions.supportLib}",
     supportAppcompatV7: "com.android.support:appcompat-v7:${versions.supportLib}",
     retrofit :"com.squareup.retrofit2:retrofit:${versions.retrofit}",
@@ -52,16 +52,18 @@ ext {
 **module_a/build.gradle** 和 **module_b/build.gradle**
 
 ```groovy
-implementation deps.supportAnnotations
-implementation deps.supportAppcompatV7
-implementation deps.retrofit
-implementation deps.retrofitRxJavaAdapter
-implementation deps.rxJava
+implementation dep.supportAnnotations
+implementation dep.supportAppcompatV7
+implementation dep.retrofit
+implementation dep.retrofitRxJavaAdapter
+implementation dep.rxJava
 ```
 
 这种方法是手动管理的一大进步，但是缺少IDE的支持，更准确的说是在更新依赖库的时候IDE不能自动补全。
 
-### 3. Kotlin + buildSrc == Android Studio Autocomplete 😎
+### 3. Kotlin + buildSrc
+
+Support Android Studio Autocomplete 😎
 
 ![img](https://user-gold-cdn.xitu.io/2018/5/31/163b57650aacdc7d?imageslim)
 
@@ -114,14 +116,14 @@ implementation DepLibs.rxjava
 
 ### 总结
 
-推荐使用**“Kotlin + buildSrc”**的方法。它支持**自动补全和单击跳转**，使得您无需在文件之间手动来回切换，方便你更好的管理Gradle依赖。缺点是：无法知道哪些库已经有新版本了
-
-> - 另外发现目前Android Studio 3.3.x 不支持自动补全和跳转，但是能正常编译通过，Android Studio 3.2.x支持自动补全和跳转，详细可参考 https://github.com/handstandsam/AndroidDependencyManagement/issues/10
-> - 检查新版本库可以参考 https://github.com/handstandsam/AndroidDependencyManagement/issues/6
+推荐使用**Kotlin + buildSrc**的方法。它支持**自动补全和单击跳转**，使得您无需在文件之间手动来回切换，方便你更好的管理Gradle依赖。缺点是：无法知道哪些库已经有新版本了
 
 ## 依赖更新检查
 
+https://github.com/ben-manes/gradle-versions-plugin
+
 ```groovy
+//😳 apply checkVersions
 apply from: './buildSrc/checkVersions.gradle'
 
 buildscript {
@@ -137,7 +139,16 @@ buildscript {
   dependencies {
     classpath "com.android.tools.build:gradle:4.0.1"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    classpath "com.github.ben-manes:gradle-versions-plugin:0.29.0"
+    //😳 add plugin
+    classpath "com.github.ben-manes:gradle-versions-plugin:0.36.0"
   }
 }
+```
+
+```zsh
+./gradlew dependencyUpdates
+
+./gradlew dependencyUpdates -Drevision=release
+
+./gradlew dependencyUpdates -Drevision=release -DoutputFormatter=json,xml,html
 ```
