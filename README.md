@@ -152,3 +152,7 @@ buildscript {
 
 ./gradlew dependencyUpdates -Drevision=release -DoutputFormatter=json,xml,html
 ```
+
+### Lint方式检查更新
+
+https://github.com/PicPay/version-checker-gradle-lint
