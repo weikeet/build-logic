@@ -28,11 +28,16 @@ object DepLibs {
 
   // CheckOn 20200814 KotlinLib
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.4.0"
+  private const val KotlinVer = "1.4.21"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
   const val KotlinLib8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KotlinVer}" // 增加了对 JDK8 中某些特性支持
+  const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${KotlinVer}"
+
+  private const val KotlinXVer = "1.4.2"
+  const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
+  const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
 
   // CheckOn 20200814 EventBus
   // https://github.com/greenrobot/EventBus
@@ -117,8 +122,8 @@ object AndroidXLibs {
 
   // https://mvnrepository.com/artifact/androidx.core/core
   // https://mvnrepository.com/artifact/androidx.core/core-ktx
-  const val Core = "androidx.core:core:1.3.1"
-  const val CoreKtx = "androidx.core:core-ktx:1.3.1"
+  const val Core = "androidx.core:core:1.3.2"
+  const val CoreKtx = "androidx.core:core-ktx:1.3.2"
 
   // https://mvnrepository.com/artifact/androidx.activity/activity
   // https://mvnrepository.com/artifact/androidx.activity/activity-ktx
