@@ -9,10 +9,10 @@
  */
 
 object Versions {
-  const val minSdkVersion = 21
-  const val targetSdkVersion = 30
-  const val compileSdkVersion = 30
-  const val buildToolsVersion = "30.0.3"
+  const val minSdk = 21
+  const val targetSdk = 30
+  const val compileSdk = 30
+  const val buildTools = "30.0.3"
 }
 
 object DepLibs {
@@ -84,7 +84,7 @@ object AndroidXLibs {
   // Contains: Core Fragment AppCompatResources CursorAdapter DrawerLayout Collection Annotation
   const val AppCompat = "androidx.appcompat:appcompat:1.2.0"
 
-  const val MaterialDesign = "com.google.android.material:material:1.2.1"
+  const val MaterialDesign = "com.google.android.material:material:1.3.0"
 
   const val RecyclerView = "androidx.recyclerview:recyclerview:1.2.0"
 
