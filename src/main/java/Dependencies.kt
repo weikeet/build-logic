@@ -17,7 +17,7 @@ object Versions {
 
 object DepLibs {
   // https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
-  const val AndroidPlugin = "com.android.tools.build:gradle:4.2.0"
+  const val AndroidPlugin = "com.android.tools.build:gradle:4.2.1"
 
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.20"
@@ -26,7 +26,7 @@ object DepLibs {
   const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.38.0"
 
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.4.32"
+  private const val KotlinVer = "1.5.10"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
@@ -34,7 +34,7 @@ object DepLibs {
   const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${KotlinVer}"
 
   // https://github.com/Kotlin/kotlinx.coroutines
-  private const val KotlinXVer = "1.4.3"
+  private const val KotlinXVer = "1.5.0"
   const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
   const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
 
