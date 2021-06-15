@@ -82,7 +82,7 @@ object AndroidXLibs {
   // https://developer.android.com/jetpack/androidx/versions
 
   // Contains: Core Fragment AppCompatResources CursorAdapter DrawerLayout Collection Annotation
-  const val AppCompat = "androidx.appcompat:appcompat:1.2.0"
+  const val AppCompat = "androidx.appcompat:appcompat:1.3.0"
 
   const val MaterialDesign = "com.google.android.material:material:1.3.0"
 
@@ -101,15 +101,15 @@ object AndroidXLibs {
 
   const val Annotation = "androidx.annotation:annotation:1.2.0"
 
-  const val Core = "androidx.core:core:1.3.2"
-  const val CoreKtx = "androidx.core:core-ktx:1.3.2"
+  const val Core = "androidx.core:core:1.5.0"
+  const val CoreKtx = "androidx.core:core-ktx:1.5.0"
 
   const val Activity = "androidx.activity:activity:1.2.2"
   const val ActivityKtx = "androidx.activity:activity-ktx:1.2.2"
 
   // Contains: Activity(Ktx) Core(Ktx) ViewModel(Ktx) LiveDataCore(Ktx)
-  const val Fragment = "androidx.fragment:fragment:1.3.3"
-  const val FragmentKtx = "androidx.fragment:fragment-ktx:1.3.3"
+  const val Fragment = "androidx.fragment:fragment:1.3.4"
+  const val FragmentKtx = "androidx.fragment:fragment-ktx:1.3.4"
 
   // https://mvnrepository.com/artifact/androidx.cursoradapter/cursoradapter
   const val CursorAdapter = "androidx.cursoradapter:cursoradapter:1.0.0"
