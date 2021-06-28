@@ -26,7 +26,7 @@ object DepLibs {
   const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.38.0"
 
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.5.10"
+  private const val KotlinVer = "1.5.20"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
