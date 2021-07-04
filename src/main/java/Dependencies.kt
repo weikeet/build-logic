@@ -111,6 +111,9 @@ object AndroidXLibs {
   const val Fragment = "androidx.fragment:fragment:1.3.4"
   const val FragmentKtx = "androidx.fragment:fragment-ktx:1.3.4"
 
+  const val WorkManager = "androidx.work:work-runtime:2.5.0"
+  const val WorkManagerKtx = "androidx.work:work-runtime-ktx:2.5.0"
+
   // https://mvnrepository.com/artifact/androidx.cursoradapter/cursoradapter
   const val CursorAdapter = "androidx.cursoradapter:cursoradapter:1.0.0"
 
@@ -290,6 +293,7 @@ object ImageLoaderLibs {
   const val Glide = "com.github.bumptech.glide:glide:${GlideVer}"
   const val GlideCompiler = "com.github.bumptech.glide:compiler:${GlideVer}"
   const val GlideLoaderOkHttp3 = "com.github.bumptech.glide:okhttp3-integration:${GlideVer}"
+
   // https://github.com/wasabeef/glide-transformations
   const val GlideTransformations = "jp.wasabeef:glide-transformations:4.3.0"
   const val GlideGPUImage = "jp.co.cyberagent.android:gpuimage:2.1.0" // If you want to use the GPU Filters
