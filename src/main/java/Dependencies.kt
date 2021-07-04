@@ -290,6 +290,9 @@ object ImageLoaderLibs {
   const val Glide = "com.github.bumptech.glide:glide:${GlideVer}"
   const val GlideCompiler = "com.github.bumptech.glide:compiler:${GlideVer}"
   const val GlideLoaderOkHttp3 = "com.github.bumptech.glide:okhttp3-integration:${GlideVer}"
+  // https://github.com/wasabeef/glide-transformations
+  const val GlideTransformations = "jp.wasabeef:glide-transformations:4.3.0"
+  const val GlideGPUImage = "jp.co.cyberagent.android:gpuimage:2.1.0" // If you want to use the GPU Filters
 
   // https://github.com/coil-kt/coil
   const val Coil = "io.coil-kt:coil:1.2.1"
