@@ -347,8 +347,8 @@ object WidgetLibs {
 
   // https://github.com/drakeet/MultiType
   // https://github.com/PureWriter/about-page
-  const val AboutPage = "me.drakeet.support:about:2.4.1"
-  const val MultiType = "me.drakeet.multitype:multitype:4.2.0"
+  const val AboutPage = "com.drakeet.about:about:2.4.1"
+  const val MultiType = "com.drakeet.multitype:multitype:4.3.0"
 
   // https://github.com/airbnb/lottie-android
   // https://mvnrepository.com/artifact/com.airbnb.android/lottie
