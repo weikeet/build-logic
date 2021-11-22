@@ -226,13 +226,9 @@ object ArchitectureLibs {
  * Desc: Http Libs
  */
 object HttpLibs {
+  // https://square.github.io/retrofit
   // https://github.com/square/retrofit
   // https://mvnrepository.com/artifact/com.squareup.retrofit2
-  // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
-  // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
-  // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-moshi
-  // https://mvnrepository.com/artifact/com.squareup.retrofit2/adapter-rxjava2
-  // https://mvnrepository.com/artifact/com.squareup.retrofit2/adapter-rxjava3
   private const val RetrofitVer = "2.9.0"
   const val Retrofit = "com.squareup.retrofit2:retrofit:${RetrofitVer}"
   const val RetrofitConverterGson = "com.squareup.retrofit2:converter-gson:${RetrofitVer}"
@@ -240,12 +236,10 @@ object HttpLibs {
   const val RetrofitAdapterRxJava2 = "com.squareup.retrofit2:adapter-rxjava2:${RetrofitVer}"
   const val RetrofitAdapterRxJava3 = "com.squareup.retrofit2:adapter-rxjava3:${RetrofitVer}"
 
+  // https://square.github.io/okhttp
   // https://github.com/square/okhttp
   // https://mvnrepository.com/artifact/com.squareup.okhttp3
-  // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
-  // https://mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor
-  // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp-urlconnection
-  private const val OkHttp3Ver = "4.9.1"
+  private const val OkHttp3Ver = "4.9.2"
   const val OkHttp3 = "com.squareup.okhttp3:okhttp:${OkHttp3Ver}"
   const val OkHttp3Logging = "com.squareup.okhttp3:logging-interceptor:${OkHttp3Ver}"
   const val OkHttp3UrlConnection = "com.squareup.okhttp3:okhttp-urlconnection:${OkHttp3Ver}"
@@ -292,7 +286,9 @@ object ImageLoaderLibs {
   private const val GlideVer = "4.12.0"
   const val Glide = "com.github.bumptech.glide:glide:${GlideVer}"
   const val GlideCompiler = "com.github.bumptech.glide:compiler:${GlideVer}"
-  const val GlideLoaderOkHttp3 = "com.github.bumptech.glide:okhttp3-integration:${GlideVer}"
+
+  // https://muyangmin.github.io/glide-docs-cn/int/okhttp3.html
+  const val GlideLoaderOkHttp3 = "com.github.bumptech.glide:okhttp3-integration:4.11.0"
 
   // https://github.com/wasabeef/glide-transformations
   const val GlideTransformations = "jp.wasabeef:glide-transformations:4.3.0"
