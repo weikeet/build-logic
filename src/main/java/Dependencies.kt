@@ -131,45 +131,29 @@ object AndroidXLibs {
 object ArchitectureLibs {
   // https://developer.android.com/topic/libraries/architecture/index.html
 
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-extensions
+  // https://mvnrepository.com/artifact/androidx.lifecycle
   @Deprecated("Use Runtime/ViewModel/LiveData")
   const val LifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-runtime
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-runtime-ktx
   private const val RuntimeVer = "2.3.1"
   const val LifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${RuntimeVer}"
   const val LifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${RuntimeVer}"
 
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel-ktx
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-viewmodel-savedstate
   private const val ViewModelVer = "2.3.1"
   const val LifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel:${ViewModelVer}"
   const val LifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${ViewModelVer}"
   const val LifecycleViewModelSaveState = "androidx.lifecycle:lifecycle-viewmodel-savedstate:${ViewModelVer}"
 
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-ktx
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-core
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-livedata-core-ktx
   private const val LiveDataVer = "2.3.1"
   const val LifecycleLiveData = "androidx.lifecycle:lifecycle-livedata:${LiveDataVer}" //Contains LiveData Core
   const val LifecycleLiveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${LiveDataVer}"  //Contains LiveData CoreKtx
   const val LifecycleLiveDataCore = "androidx.lifecycle:lifecycle-livedata-core:${LiveDataVer}"
   const val LifecycleLiveDataCoreKtx = "androidx.lifecycle:lifecycle-livedata-core-ktx:${LiveDataVer}"
 
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-common-java8
   private const val LifecycleCommonVer = "2.3.1"
   const val LifecycleCommon = "androidx.lifecycle:lifecycle-common:${LifecycleCommonVer}"
   const val LifecycleCommonJava8 = "androidx.lifecycle:lifecycle-common-java8:${LifecycleCommonVer}"
 
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-compiler
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-process
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-service
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-reactivestreams
-  // https://mvnrepository.com/artifact/androidx.lifecycle/lifecycle-reactivestreams-ktx
   private const val LifecycleOtherVer = "2.3.1"
   const val LifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${LifecycleOtherVer}"
   const val LifecycleProcess = "androidx.lifecycle:lifecycle-process:${LifecycleOtherVer}"
@@ -177,11 +161,10 @@ object ArchitectureLibs {
   const val LifecycleReactiveStreams = "androidx.lifecycle:lifecycle-reactivestreams:${LifecycleOtherVer}"
   const val LifecycleReactiveStreamsKtx = "androidx.lifecycle:lifecycle-reactivestreams-ktx:${LifecycleOtherVer}"
 
-  // https://mvnrepository.com/artifact/androidx.room/room-runtime
-  // https://mvnrepository.com/artifact/androidx.room/room-compiler
-  // https://mvnrepository.com/artifact/androidx.room/room-rxjava2
-  // https://mvnrepository.com/artifact/androidx.room/room-common
-  // https://mvnrepository.com/artifact/androidx.room/room-ktx
+  // https://mvnrepository.com/artifact/androidx.startup
+  const val Startup = "androidx.startup:startup-runtime:1.1.0"
+
+  // https://mvnrepository.com/artifact/androidx.room
   private const val RoomLibVer = "2.3.0"
   const val RoomRuntime = "androidx.room:room-runtime:${RoomLibVer}"
   const val RoomCompiler = "androidx.room:room-compiler:${RoomLibVer}"
@@ -189,12 +172,7 @@ object ArchitectureLibs {
   const val RoomCommon = "androidx.room:room-common:${RoomLibVer}"
   const val RoomKtx = "androidx.room:room-ktx:${RoomLibVer}"
 
-  // https://mvnrepository.com/artifact/androidx.paging/paging-runtime
-  // https://mvnrepository.com/artifact/androidx.paging/paging-runtime-ktx
-  // https://mvnrepository.com/artifact/androidx.paging/paging-common
-  // https://mvnrepository.com/artifact/androidx.paging/paging-common-ktx
-  // https://mvnrepository.com/artifact/androidx.paging/paging-rxjava2
-  // https://mvnrepository.com/artifact/androidx.paging/paging-rxjava2-ktx
+  // https://mvnrepository.com/artifact/androidx.paging
   private const val PagingLibVer = "2.1.2"
   const val PagingRuntime = "androidx.paging:paging-runtime:${PagingLibVer}"
   const val PagingRuntimeKtx = "androidx.paging:paging-runtime-ktx:${PagingLibVer}"
@@ -203,14 +181,7 @@ object ArchitectureLibs {
   const val PagingRxJava2 = "androidx.paging:paging-rxjava2:${PagingLibVer}"
   const val PagingRxJava2Ktx = "androidx.paging:paging-rxjava2-ktx:${PagingLibVer}"
 
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-fragment
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-fragment-ktx
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-ui
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-ui-ktx
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-runtime
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-runtime-ktx
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-common
-  // https://mvnrepository.com/artifact/androidx.navigation/navigation-common-ktx
+  // https://mvnrepository.com/artifact/androidx.navigation
   private const val NavigationLibVer = "2.3.5"
   const val NavigationFragment = "androidx.navigation:navigation-fragment:${NavigationLibVer}"
   const val NavigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${NavigationLibVer}"
