@@ -111,8 +111,8 @@ object AndroidXLibs {
   const val Fragment = "androidx.fragment:fragment:1.3.4"
   const val FragmentKtx = "androidx.fragment:fragment-ktx:1.3.4"
 
-  const val WorkManager = "androidx.work:work-runtime:2.5.0"
-  const val WorkManagerKtx = "androidx.work:work-runtime-ktx:2.5.0"
+  const val WorkManager = "androidx.work:work-runtime:2.7.0"
+  const val WorkManagerKtx = "androidx.work:work-runtime-ktx:2.7.0"
 
   // https://mvnrepository.com/artifact/androidx.cursoradapter/cursoradapter
   const val CursorAdapter = "androidx.cursoradapter:cursoradapter:1.0.0"
