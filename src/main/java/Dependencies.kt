@@ -26,7 +26,7 @@ object DepLibs {
   const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.38.0"
 
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.5.20"
+  private const val KotlinVer = "1.6.0"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
@@ -34,7 +34,7 @@ object DepLibs {
   const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${KotlinVer}"
 
   // https://github.com/Kotlin/kotlinx.coroutines
-  private const val KotlinXVer = "1.5.0"
+  private const val KotlinXVer = "1.5.2"
   const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
   const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
 
