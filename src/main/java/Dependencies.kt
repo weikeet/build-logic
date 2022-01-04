@@ -16,14 +16,12 @@ object Versions {
 }
 
 object DepLibs {
-  // https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
-  const val AndroidPlugin = "com.android.tools.build:gradle:4.2.1"
 
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.20"
 
   // https://github.com/ben-manes/gradle-versions-plugin
-  const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.38.0"
+  const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.40.0"
 
   // https://github.com/JetBrains/kotlin
   private const val KotlinVer = "1.6.0"
@@ -34,7 +32,7 @@ object DepLibs {
   const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${KotlinVer}"
 
   // https://github.com/Kotlin/kotlinx.coroutines
-  private const val KotlinXVer = "1.5.2"
+  private const val KotlinXVer = "1.6.0"
   const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
   const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
 
@@ -63,13 +61,13 @@ object DepLibs {
   const val DanmakuNdkBitmap = "com.github.ctiao:ndkbitmap-armv7a:0.9.21"
 
   // https://mvnrepository.com/artifact/com.google.dagger
-  private const val Dagger2Ver = "2.83.3"
+  private const val Dagger2Ver = "2.40.5"
   const val Dagger2 = "com.google.dagger:dagger:${Dagger2Ver}"
   const val Dagger2Compiler = "com.google.dagger:dagger-compiler:${Dagger2Ver}"
   const val Dagger2Android = "com.google.dagger:dagger-android:${Dagger2Ver}"
   const val Dagger2AndroidSupport = "com.google.dagger:dagger-android-support:${Dagger2Ver}"
   const val Dagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:${Dagger2Ver}"
-  private const val HiltVer = "2.83.3-alpha"
+  private const val HiltVer = "2.40.5"
   const val Hilt = "com.google.dagger:hilt-android:${HiltVer}"
   const val HiltCompiler = "com.google.dagger:hilt-android-compiler:${HiltVer}"
 }
@@ -82,7 +80,7 @@ object AndroidXLibs {
   // https://developer.android.com/jetpack/androidx/versions
 
   // Contains: Core Fragment AppCompatResources CursorAdapter DrawerLayout Collection Annotation
-  const val AppCompat = "androidx.appcompat:appcompat:1.3.0"
+  const val AppCompat = "androidx.appcompat:appcompat:1.3.1"
 
   const val MaterialDesign = "com.google.android.material:material:1.3.0"
 
@@ -101,21 +99,18 @@ object AndroidXLibs {
 
   const val Annotation = "androidx.annotation:annotation:1.2.0"
 
-  const val Core = "androidx.core:core:1.5.0"
-  const val CoreKtx = "androidx.core:core-ktx:1.5.0"
+  const val Core = "androidx.core:core:1.6.0"
+  const val CoreKtx = "androidx.core:core-ktx:1.6.0"
 
-  const val Activity = "androidx.activity:activity:1.2.2"
-  const val ActivityKtx = "androidx.activity:activity-ktx:1.2.2"
+  const val Activity = "androidx.activity:activity:1.3.1"
+  const val ActivityKtx = "androidx.activity:activity-ktx:1.3.1"
 
   // Contains: Activity(Ktx) Core(Ktx) ViewModel(Ktx) LiveDataCore(Ktx)
-  const val Fragment = "androidx.fragment:fragment:1.3.4"
-  const val FragmentKtx = "androidx.fragment:fragment-ktx:1.3.4"
+  const val Fragment = "androidx.fragment:fragment:1.3.6"
+  const val FragmentKtx = "androidx.fragment:fragment-ktx:1.3.6"
 
   const val WorkManager = "androidx.work:work-runtime:2.7.0"
   const val WorkManagerKtx = "androidx.work:work-runtime-ktx:2.7.0"
-
-  // https://mvnrepository.com/artifact/androidx.cursoradapter/cursoradapter
-  const val CursorAdapter = "androidx.cursoradapter:cursoradapter:1.0.0"
 
   // https://mvnrepository.com/artifact/androidx.drawerlayout/drawerlayout
   const val DrawerLayout = "androidx.drawerlayout:drawerlayout:1.1.1"
