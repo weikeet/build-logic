@@ -18,13 +18,13 @@ object Versions {
 object DepLibs {
 
   // https://github.com/shwenzhang/AndResGuard
-  const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.20"
+  const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.21"
 
   // https://github.com/ben-manes/gradle-versions-plugin
-  const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.40.0"
+  const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.42.0"
 
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.6.0"
+  private const val KotlinVer = "1.6.10"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
@@ -37,13 +37,13 @@ object DepLibs {
   const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
 
   // https://github.com/greenrobot/EventBus
-  const val EventBus = "org.greenrobot:eventbus:3.2.0"
+  const val EventBus = "org.greenrobot:eventbus:3.3.1"
 
   // https://github.com/google/gson
-  const val Gson = "com.google.code.gson:gson:2.8.6"
+  const val Gson = "com.google.code.gson:gson:2.9.0"
 
   // https://github.com/jhy/jsoup
-  const val JSoup = "org.jsoup:jsoup:1.13.1"
+  const val JSoup = "org.jsoup:jsoup:1.14.3"
 
   // https://github.com/alibaba/ARouter
   const val ARouter = "com.alibaba:arouter-api:1.5.0"
@@ -61,13 +61,13 @@ object DepLibs {
   const val DanmakuNdkBitmap = "com.github.ctiao:ndkbitmap-armv7a:0.9.21"
 
   // https://mvnrepository.com/artifact/com.google.dagger
-  private const val Dagger2Ver = "2.40.5"
+  private const val Dagger2Ver = "2.41"
   const val Dagger2 = "com.google.dagger:dagger:${Dagger2Ver}"
   const val Dagger2Compiler = "com.google.dagger:dagger-compiler:${Dagger2Ver}"
   const val Dagger2Android = "com.google.dagger:dagger-android:${Dagger2Ver}"
   const val Dagger2AndroidSupport = "com.google.dagger:dagger-android-support:${Dagger2Ver}"
   const val Dagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:${Dagger2Ver}"
-  private const val HiltVer = "2.40.5"
+  private const val HiltVer = "2.41"
   const val Hilt = "com.google.dagger:hilt-android:${HiltVer}"
   const val HiltCompiler = "com.google.dagger:hilt-android-compiler:${HiltVer}"
 }
@@ -219,7 +219,7 @@ object RxLibs {
   // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava
   // https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava
   const val RxJava2 = "io.reactivex.rxjava2:rxjava:2.2.19"
-  const val RxJava3 = "io.reactivex.rxjava3:rxjava:3.0.12"
+  const val RxJava3 = "io.reactivex.rxjava3:rxjava:3.1.3"
 
   // https://github.com/ReactiveX/RxAndroid
   // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxandroid
@@ -249,7 +249,7 @@ object RxLibs {
  */
 object ImageLoaderLibs {
   // https://github.com/bumptech/glide
-  private const val GlideVer = "4.12.0"
+  private const val GlideVer = "4.13.1"
   const val Glide = "com.github.bumptech.glide:glide:${GlideVer}"
   const val GlideCompiler = "com.github.bumptech.glide:compiler:${GlideVer}"
 

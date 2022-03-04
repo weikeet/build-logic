@@ -1,6 +1,8 @@
 ## 使用Kotlin管理Gradle依赖
 
-为了充分利用Android Plugin for Gradle 3.0+的优点，将Android项目拆分成多个module的做法越来越常见。然而，随着module数量的增多，我们很快就会遇到依赖管理的混乱问题。
+为了充分利用Android Plugin for Gradle 3.0+的优点，将Android项目拆分成多个module的做法越来越常见。
+
+然而，随着module数量的增多，我们很快就会遇到依赖管理的混乱问题。
 
 ### 管理Gradle依赖的三种不同方法
 
@@ -15,48 +17,38 @@
 **module_a/build.gradle** 和 **module_b/build.gradle**
 
 ```groovy
-implementation "com.android.support:support-annotations:28.0.0"
-implementation "com.android.support:appcompat-v7:28.0.0"
-implementation "com.squareup.retrofit2:retrofit:2.4.0"
-implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
-implementation "io.reactivex.rxjava2:rxjava:2.2.3"
+implementation 'androidx.core:core-ktx:1.7.0'
+implementation 'androidx.appcompat:appcompat:1.4.1'
+implementation 'com.google.android.material:material:1.5.0'
+implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 ```
 
 这里存在许多重复的配置，而且当你的项目有很多module时很难管理依赖库的版本更新
 
 ### 2. Google推荐：使用gradle的extra属性
 
-Google在[Android官方文档](https://developer.android.com/studio/build/gradle-tips)中推荐这种管理依赖的方法。许多项目例如ButterKnife、Picasso等都在使用这种方法。
+Google在 [Android官方文档](https://developer.android.com/studio/build/gradle-tips) 中推荐这种管理依赖的方法。许多项目例如ButterKnife、Picasso等都在使用这种方法。
 
-此方法非常适用于更新support library的版本，因为每个support library都具有相同的版本号，你只需要在一个地方更改它就行了。 Retrofit等其它第三方库也是如此。
+此方法非常适用于更新 support library 的版本，因为每个 support library 都具有相同的版本号，你只需要在一个地方更改它就行了。 Retrofit 等其它第三方库也是如此。
 
 **Root-level build.gradle**
 
 ```groovy
 ext {
-  versions = [
-    supportLib: "28.0.0",
-    retrofit: "2.4.0",
-    rxJava: "2.2.3"
-  ]
-  dep = [
-    supportAnnotations: "com.android.support:support-annotations:${versions.supportLib}",
-    supportAppcompatV7: "com.android.support:appcompat-v7:${versions.supportLib}",
-    retrofit :"com.squareup.retrofit2:retrofit:${versions.retrofit}",
-    retrofitRxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
-    rxJava: "io.reactivex.rxjava2:rxjava:${versions.rxJava}"
-  ]
+  dep = [CoreKtx         : "androidx.core:core-ktx:1.7.0",
+         AppCompat       : "androidx.appcompat:appcompat:1.4.1",
+         MaterialDesign  : "com.google.android.material:material:1.5.0",
+         ConstraintLayout: "androidx.constraintlayout:constraintlayout:2.1.3",]
 }
 ```
 
-**module_a/build.gradle** 和 **module_b/build.gradle**
+**module/build.gradle**
 
 ```groovy
-implementation dep.supportAnnotations
-implementation dep.supportAppcompatV7
-implementation dep.retrofit
-implementation dep.retrofitRxJavaAdapter
-implementation dep.rxJava
+implementation dep.CoreKtx
+implementation dep.AppCompat
+implementation dep.MaterialDesign
+implementation dep.ConstraintLayout
 ```
 
 这种方法是手动管理的一大进步，但是缺少IDE的支持，更准确的说是在更新依赖库的时候IDE不能自动补全。
@@ -85,18 +77,11 @@ Support Android Studio Autocomplete 😎
 3. 在**buildSrc**文件夹里创建**src/main/java**文件夹，如下图所示。并在该文件夹下创建**Dependencies.kt**文件，文件内容参考之前的描述。
 
    ```kotlin
-   object Versions {
-       const val SupportLib = "28.0.0"
-       const val Retrofit = "2.4.0"
-       const val RxJava = "2.2.3"
-   }
-
-   object DepLibs {
-      const val supportAnnotations = "com.android.support:support-annotations:${Versions.SupportLib}"
-      const val supportAppcompatV7 = "com.android.support:appcompat-v7:${Versions.SupportLib}"
-      const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.Retrofit}"
-      const val retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.Retrofit}"
-      const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.RxJava}"
+   object AndroidXLibs {
+      const val CoreKtx = "androidx.core:core-ktx:1.7.0"
+      const val AppCompat = "androidx.appcompat:appcompat:1.4.1"
+      const val MaterialDesign = "com.google.android.material:material:1.5.0"
+      const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
    }
    ```
 
@@ -107,16 +92,17 @@ Support Android Studio Autocomplete 😎
 **module_a/build.gradle** 和 **module_a/build.gradle**
 
 ```groovy
-implementation DepLibs.support_annotations
-implementation DepLibs.support_appcompat_v7
-implementation DepLibs.retrofit
-implementation DepLibs.retrofit_rxjava_adapter
-implementation DepLibs.rxjava
+implementation AndroidXLibs.CoreKtx
+implementation AndroidXLibs.AppCompat
+implementation AndroidXLibs.MaterialDesign
+implementation AndroidXLibs.ConstraintLayout
 ```
 
 ### 总结
 
-推荐使用**Kotlin + buildSrc**的方法。它支持**自动补全和单击跳转**，使得您无需在文件之间手动来回切换，方便你更好的管理Gradle依赖。缺点是：无法知道哪些库已经有新版本了
+推荐使用**Kotlin + buildSrc**的方法。它支持**自动补全和单击跳转**，使得您无需在文件之间手动来回切换，方便你更好的管理Gradle依赖。
+
+缺点是：无法知道哪些库已经有新版本了
 
 ## 依赖更新检查
 
@@ -128,19 +114,22 @@ apply from: './buildSrc/checkVersions.gradle'
 
 buildscript {
   ext {
-    kotlin_version = '1.4.0'
+    kotlin_version = '1.6.10'
   }
 
   repositories {
     google()
-    jcenter()
+    mavenCentral()
+    maven { url 'https://maven.aliyun.com/repository/public/' }
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:4.0.1"
+    classpath "com.android.tools.build:gradle:7.1.2"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
     //😳 add plugin
-    classpath "com.github.ben-manes:gradle-versions-plugin:0.36.0"
+    // https://github.com/ben-manes/gradle-versions-plugin
+    classpath "com.github.ben-manes:gradle-versions-plugin:0.42.0"
   }
 }
 ```
