@@ -177,7 +177,7 @@ object ArchitectureLibs {
   const val PagingRxJava2Ktx = "androidx.paging:paging-rxjava2-ktx:${PagingLibVer}"
 
   // https://mvnrepository.com/artifact/androidx.navigation
-  private const val NavigationLibVer = "2.4.1"
+  private const val NavigationLibVer = "2.4.2"
   const val NavigationFragment = "androidx.navigation:navigation-fragment:${NavigationLibVer}"
   const val NavigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${NavigationLibVer}"
   const val NavigationUI = "androidx.navigation:navigation-ui:${NavigationLibVer}"
