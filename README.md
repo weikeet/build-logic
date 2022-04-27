@@ -1,5 +1,7 @@
 ## 使用Kotlin管理Gradle依赖
 
+add gradle 7.x manager: https://juejin.cn/post/6997396071055900680
+
 为了充分利用Android Plugin for Gradle 3.0+的优点，将Android项目拆分成多个module的做法越来越常见。
 
 然而，随着module数量的增多，我们很快就会遇到依赖管理的混乱问题。
