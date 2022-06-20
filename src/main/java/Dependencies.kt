@@ -10,9 +10,9 @@
 
 object Versions {
   const val minSdk = 21
-  const val targetSdk = 30
-  const val compileSdk = 30
-  const val buildTools = "30.0.3"
+  const val targetSdk = 32
+  const val compileSdk = 32
+  const val buildTools = "32.0.0"
 }
 
 object DepLibs {
@@ -24,7 +24,7 @@ object DepLibs {
   const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.42.0"
 
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.6.10"
+  private const val KotlinVer = "1.6.21"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
   const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
   const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
@@ -32,7 +32,7 @@ object DepLibs {
   const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${KotlinVer}"
 
   // https://github.com/Kotlin/kotlinx.coroutines
-  private const val KotlinXVer = "1.6.0"
+  private const val KotlinXVer = "1.6.2"
   const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
   const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
 
@@ -205,7 +205,7 @@ object HttpLibs {
   // https://square.github.io/okhttp
   // https://github.com/square/okhttp
   // https://mvnrepository.com/artifact/com.squareup.okhttp3
-  private const val OkHttp3Ver = "4.9.2"
+  private const val OkHttp3Ver = "4.9.3"
   const val OkHttp3 = "com.squareup.okhttp3:okhttp:${OkHttp3Ver}"
   const val OkHttp3Logging = "com.squareup.okhttp3:logging-interceptor:${OkHttp3Ver}"
   const val OkHttp3UrlConnection = "com.squareup.okhttp3:okhttp-urlconnection:${OkHttp3Ver}"
@@ -218,8 +218,8 @@ object RxLibs {
   // https://github.com/ReactiveX/RxJava
   // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava
   // https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava
-  const val RxJava2 = "io.reactivex.rxjava2:rxjava:2.2.19"
-  const val RxJava3 = "io.reactivex.rxjava3:rxjava:3.1.3"
+  const val RxJava2 = "io.reactivex.rxjava2:rxjava:2.2.21"
+  const val RxJava3 = "io.reactivex.rxjava3:rxjava:3.1.5"
 
   // https://github.com/ReactiveX/RxAndroid
   // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxandroid
@@ -232,11 +232,8 @@ object RxLibs {
   const val RxKotlin2 = "io.reactivex.rxjava2:rxkotlin2.4.0"
   const val RxKotlin3 = "io.reactivex.rxjava3:rxkotlin3.0.1"
 
-  // https://github.com/tbruyelle/RxPermissions
-  const val RxPermissions2 = "com.github.tbruyelle:rxpermissions:0.12"
-
   // https://github.com/ssseasonnn/RxDownload
-  private const val RxDownloadVer = "1.1.2"
+  private const val RxDownloadVer = "1.1.4"
   const val RxDownload = "com.github.ssseasonnn:RxDownload:${RxDownloadVer}"
   const val RxDownloads = "com.github.ssseasonnn.RxDownload:rxdownload4:${RxDownloadVer}"
   const val RxDownloadManager = "com.github.ssseasonnn.RxDownload:rxdownload4-manager:${RxDownloadVer}"
@@ -249,7 +246,7 @@ object RxLibs {
  */
 object ImageLoaderLibs {
   // https://github.com/bumptech/glide
-  private const val GlideVer = "4.13.1"
+  private const val GlideVer = "4.13.2"
   const val Glide = "com.github.bumptech.glide:glide:${GlideVer}"
   const val GlideCompiler = "com.github.bumptech.glide:compiler:${GlideVer}"
 
@@ -261,10 +258,10 @@ object ImageLoaderLibs {
   const val GlideGPUImage = "jp.co.cyberagent.android:gpuimage:2.1.0" // If you want to use the GPU Filters
 
   // https://github.com/coil-kt/coil
-  const val Coil = "io.coil-kt:coil:1.2.1"
+  const val Coil = "io.coil-kt:coil:2.1.0"
 
   // https://github.com/facebook/fresco
-  const val Fresco = "com.facebook.fresco:fresco:2.4.0"
+  const val Fresco = "com.facebook.fresco:fresco:2.6.0"
 }
 
 /**
@@ -272,10 +269,10 @@ object ImageLoaderLibs {
  */
 object AnalyticLibs {
   // https://github.com/JakeWharton/timber
-  const val Timber = "com.jakewharton.timber:timber:4.7.1"
+  const val Timber = "com.jakewharton.timber:timber:5.0.1"
 
   // https://github.com/square/leakcanary
-  private const val LeakCanaryVer = "2.7"
+  private const val LeakCanaryVer = "2.9.1"
   const val LeakCanaryDebug = "com.squareup.leakcanary:leakcanary-android:${LeakCanaryVer}"
   const val LeakCanaryRelease = "com.squareup.leakcanary:leakcanary-android-no-op:${LeakCanaryVer}"
 }
@@ -285,39 +282,25 @@ object AnalyticLibs {
  */
 object WidgetLibs {
   // https://github.com/nex3z/FlowLayout
-  const val FlowLayout = "com.nex3z:flow-layout:1.3.2"
+  const val FlowLayout = "com.nex3z:flow-layout:1.3.3"
 
   // https://github.com/PhilJay/MPAndroidChart
   const val MPAndroidChart = "com.github.PhilJay:MPAndroidChart:v3.1.0"
 
-  // https://github.com/aurelhubert/ahbottomnavigation
-  const val AHBottomNavigation = "com.aurelhubert:ahbottomnavigation:2.3.4"
-
-  // https://github.com/hdodenhof/CircleImageView
-  const val CircleImageView = "de.hdodenhof:circleimageview:3.1.0"
-
   // https://github.com/chrisbanes/PhotoView
   const val PhotoView = "com.github.chrisbanes:PhotoView:2.3.0"
 
-  // https://github.com/gyf-dev/ImmersionBar
-  const val ImmersionBar = "com.gyf.immersionbar:immersionbar:3.0.0"
-  const val ImmersionBarKtx = "com.gyf.immersionbar:immersionbar-ktx:3.0.0"
-  const val ImmersionBarFragment = "com.gyf.immersionbar:immersionbar-components:3.0.0"
-
-  // https://github.com/CymChad/BaseRecyclerViewAdapterHelper
-  const val BaseRecyclerViewAdapterHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46"
-
   // https://github.com/drakeet/MultiType
   // https://github.com/PureWriter/about-page
-  const val AboutPage = "com.drakeet.about:about:2.4.1"
+  const val AboutPage = "com.drakeet.about:about:2.5.1"
   const val MultiType = "com.drakeet.multitype:multitype:4.3.0"
 
   // https://github.com/airbnb/lottie-android
   // https://mvnrepository.com/artifact/com.airbnb.android/lottie
-  const val Lottie = "com.airbnb.android:lottie:3.4.1"
+  const val Lottie = "com.airbnb.android:lottie:5.2.0"
 
   // https://github.com/scwang90/SmartRefreshLayout
-  private const val SmartRefreshVer = "2.0.1"
+  private const val SmartRefreshVer = "2.0.5"
   const val SmartRefreshCore = "com.scwang.smart:refresh-layout-kernel:${SmartRefreshVer}"
   const val SmartRefreshHeaderClassic = "com.scwang.smart:refresh-header-classics:${SmartRefreshVer}"
   const val SmartRefreshHeaderRadar = "com.scwang.smart:refresh-header-radar:${SmartRefreshVer}"
