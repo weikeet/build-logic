@@ -1,0 +1,13 @@
+configurations {
+  osstrich
+}
+
+dependencies {
+  osstrich 'com.squareup.osstrich:osstrich:1.3.0'
+}
+
+task publishDocs(type: JavaExec) {
+  classpath = configurations.osstrich
+  main = 'com.squareup.osstrich.JavadocPublisher'
+  args = ['build/javadoc', 'https://github.com/lecymeng/CoreComponent', 'com.github.lecymeng']
+}

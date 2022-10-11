@@ -1,0 +1,39 @@
+// Usage
+// add classpath 'com.dipien:bye-bye-jetifier:1.2.2' to root build.gradle
+// add apply from: '../buildSrc/bye-bye-jetifier.gradle' to module build.gradle
+// execute ./gradlew canISayByeByeJetifier -Pandroid.enableJetifier=false
+
+apply plugin: 'com.dipien.byebyejetifier'
+
+byeByeJetifier {
+    legacyGroupIdPrefixes = ["android.arch", "com.android.support"]
+    excludedConfigurations = ["lintClassPath"]
+    excludedFilesFromScanning = [
+            // org.jetbrains.kotlin:kotlin-compiler-embeddable:1.4.20
+            "org/jetbrains/kotlin/load/java/JvmAnnotationNamesKt",
+
+            // org.jetbrains.kotlin:kotlin-reflect:1.4.20
+            "kotlin/reflect/jvm/internal/impl/load/java/JvmAnnotationNamesKt",
+
+            // org.jetbrains.kotlin:kotlin-android-extensions:1.4.20
+            "org/jetbrains/kotlin/android/synthetic/AndroidConst",
+            "org/jetbrains/kotlin/android/synthetic/codegen/AndroidIrTransformer",
+            "org/jetbrains/kotlin/android/synthetic/codegen/ResourcePropertyStackValue",
+
+            // org.jetbrains.kotlin:kotlin-compiler-embeddable:1.4.10
+            "org/jetbrains/kotlin/com/intellij/codeInsight/NullableNotNullManager",
+
+            // com.squareup.leakcanary:shark-android:2.5
+            "shark/AndroidReferenceMatchers",
+
+            // com.squareup.leakcanary:leakcanary-object-watcher-android-support-fragments:2.5
+            "leakcanary/internal/AndroidSupportFragmentDestroyWatcher",
+
+            // com.squareup.leakcanary:leakcanary-android:2.8.1
+            "curtains/internal/WindowCallbackWrapper"
+    ]
+    // Here you can define a list of Gradle project names to be excluded from the scanning analysis
+    excludeSupportAnnotations = true
+    excludedProjectsFromScanning = []
+    verbose = false
+}

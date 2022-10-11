@@ -24,15 +24,13 @@ object DepLibs {
   const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.42.0"
 
   // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.6.21"
+  private const val KotlinVer = "1.7.20"
   const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
-  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}" // Java6 及以上版本
-  const val KotlinLib7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinVer}" // 增加了对 JDK7 中某些特性支持
-  const val KotlinLib8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KotlinVer}" // 增加了对 JDK8 中某些特性支持
+  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}"
   const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${KotlinVer}"
 
   // https://github.com/Kotlin/kotlinx.coroutines
-  private const val KotlinXVer = "1.6.2"
+  private const val KotlinXVer = "1.6.4"
   const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
   const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
 
@@ -80,9 +78,9 @@ object AndroidXLibs {
   // https://developer.android.com/jetpack/androidx/versions
 
   // Contains: Core Fragment AppCompatResources CursorAdapter DrawerLayout Collection Annotation
-  const val AppCompat = "androidx.appcompat:appcompat:1.4.1"
+  const val AppCompat = "androidx.appcompat:appcompat:1.5.1"
 
-  const val MaterialDesign = "com.google.android.material:material:1.5.0"
+  const val MaterialDesign = "com.google.android.material:material:1.6.1"
 
   const val RecyclerView = "androidx.recyclerview:recyclerview:1.2.1"
 
@@ -95,18 +93,18 @@ object AndroidXLibs {
 
   const val Annotation = "androidx.annotation:annotation:1.2.0"
 
-  const val Core = "androidx.core:core:1.7.0"
-  const val CoreKtx = "androidx.core:core-ktx:1.7.0"
+  const val Core = "androidx.core:core:1.9.0"
+  const val CoreKtx = "androidx.core:core-ktx:1.9.0"
 
   const val Activity = "androidx.activity:activity:1.4.0"
   const val ActivityKtx = "androidx.activity:activity-ktx:1.4.0"
 
   // Contains: Activity(Ktx) Core(Ktx) ViewModel(Ktx) LiveDataCore(Ktx)
-  const val Fragment = "androidx.fragment:fragment:1.4.1"
-  const val FragmentKtx = "androidx.fragment:fragment-ktx:1.4.1"
+  const val Fragment = "androidx.fragment:fragment:1.5.4"
+  const val FragmentKtx = "androidx.fragment:fragment-ktx:1.5.3"
 
-  const val WorkManager = "androidx.work:work-runtime:2.7.0"
-  const val WorkManagerKtx = "androidx.work:work-runtime-ktx:2.7.0"
+  const val WorkManager = "androidx.work:work-runtime:2.7.1"
+  const val WorkManagerKtx = "androidx.work:work-runtime-ktx:2.7.1"
 
   // https://mvnrepository.com/artifact/androidx.drawerlayout/drawerlayout
   const val DrawerLayout = "androidx.drawerlayout:drawerlayout:1.1.1"
@@ -246,7 +244,7 @@ object RxLibs {
  */
 object ImageLoaderLibs {
   // https://github.com/bumptech/glide
-  private const val GlideVer = "4.13.2"
+  private const val GlideVer = "4.14.2"
   const val Glide = "com.github.bumptech.glide:glide:${GlideVer}"
   const val GlideCompiler = "com.github.bumptech.glide:compiler:${GlideVer}"
 
