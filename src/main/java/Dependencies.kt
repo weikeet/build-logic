@@ -1,11 +1,10 @@
 @file:Suppress("unused")
 
 /**
- * 选择DependenceLibrary时需要注意:
- * 1. 打开连接查看依赖的repositories
- * 2. 是否是AndroidX特有
- * 3. 不同版本内容
- * 4. 混淆内容
+ * 选择 DependenceLibrary 时需要注意:
+ * 1. 打开连接查看依赖的 repositories (Google/MavenCenter/jitpack)
+ * 2. 不同版本内容
+ * 3. 混淆内容
  */
 
 object Versions {
@@ -13,121 +12,53 @@ object Versions {
   const val targetSdk = 32
   const val compileSdk = 32
   const val buildTools = "32.0.0"
+
+  const val KotlinVer = "1.7.10"
 }
 
-object DepLibs {
-
+object PluginLibs {
   // https://github.com/shwenzhang/AndResGuard
   const val AndResGuardPlugin = "com.tencent.mm:AndResGuard-gradle-plugin:1.2.21"
 
   // https://github.com/ben-manes/gradle-versions-plugin
   const val GradleVersionPlugin = "com.github.ben-manes:gradle-versions-plugin:0.42.0"
 
-  // https://github.com/JetBrains/kotlin
-  private const val KotlinVer = "1.7.20"
-  const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KotlinVer}"
-  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${KotlinVer}"
-  const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${KotlinVer}"
-
-  // https://github.com/Kotlin/kotlinx.coroutines
-  private const val KotlinXVer = "1.6.4"
-  const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
-  const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
-
-  // https://github.com/greenrobot/EventBus
-  const val EventBus = "org.greenrobot:eventbus:3.3.1"
-
-  // https://github.com/google/gson
-  const val Gson = "com.google.code.gson:gson:2.9.0"
-
-  // https://github.com/jhy/jsoup
-  const val JSoup = "org.jsoup:jsoup:1.14.3"
-
-  // https://github.com/alibaba/ARouter
-  const val ARouter = "com.alibaba:arouter-api:1.5.0"
-  const val ARouterCompiler = "com.alibaba:arouter-compiler:1.2.2"
-  const val ARouterRegisterPlugin = "com.alibaba:arouter-register:1.0.2"
-
-  // https://github.com/bilibili/ijkplayer
-  private const val IjkPlayerVer = "0.8.8"
-  const val IjkPlayer = "tv.danmaku.ijk.media:ijkplayer-java:${IjkPlayerVer}"
-  const val IjkPlayerArm64 = "tv.danmaku.ijk.media:ijkplayer-arm64:${IjkPlayerVer}"
-  const val IjkPlayerArmV7a = "tv.danmaku.ijk.media:ijkplayer-armv7a:${IjkPlayerVer}"
-
-  // https://github.com/bilibili/DanmakuFlameMaster
-  const val DanmakuFlameMaster = "com.github.ctiao:DanmakuFlameMaster:0.9.25"
-  const val DanmakuNdkBitmap = "com.github.ctiao:ndkbitmap-armv7a:0.9.21"
-
-  // https://mvnrepository.com/artifact/com.google.dagger
-  private const val Dagger2Ver = "2.41"
-  const val Dagger2 = "com.google.dagger:dagger:${Dagger2Ver}"
-  const val Dagger2Compiler = "com.google.dagger:dagger-compiler:${Dagger2Ver}"
-  const val Dagger2Android = "com.google.dagger:dagger-android:${Dagger2Ver}"
-  const val Dagger2AndroidSupport = "com.google.dagger:dagger-android-support:${Dagger2Ver}"
-  const val Dagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:${Dagger2Ver}"
-  private const val HiltVer = "2.41"
-  const val Hilt = "com.google.dagger:hilt-android:${HiltVer}"
-  const val HiltCompiler = "com.google.dagger:hilt-android-compiler:${HiltVer}"
+  const val KotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KotlinVer}"
 }
 
-/**
- * desc: Android X library
- * link: https://developer.android.com/jetpack/androidx/versions
- */
+// desc: Android X library
+// link: https://developer.android.com/jetpack/androidx/versions
 object AndroidXLibs {
-  // https://developer.android.com/jetpack/androidx/versions
-
   // Contains: Core Fragment AppCompatResources CursorAdapter DrawerLayout Collection Annotation
   const val AppCompat = "androidx.appcompat:appcompat:1.5.1"
 
   const val MaterialDesign = "com.google.android.material:material:1.6.1"
 
-  const val RecyclerView = "androidx.recyclerview:recyclerview:1.2.1"
-
-  const val CustomTabs = "androidx.browser:browser:1.4.0"
-
-  const val VectorDrawable = "androidx.vectordrawable:vectordrawable:1.1.0"
-  const val VectorDrawableAnimated = "androidx.vectordrawable:vectordrawable-animated:1.1.0"
-
-  const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
-
-  const val Annotation = "androidx.annotation:annotation:1.2.0"
-
   const val Core = "androidx.core:core:1.9.0"
   const val CoreKtx = "androidx.core:core-ktx:1.9.0"
 
-  const val Activity = "androidx.activity:activity:1.4.0"
-  const val ActivityKtx = "androidx.activity:activity-ktx:1.4.0"
-
   // Contains: Activity(Ktx) Core(Ktx) ViewModel(Ktx) LiveDataCore(Ktx)
-  const val Fragment = "androidx.fragment:fragment:1.5.4"
+  const val Fragment = "androidx.fragment:fragment:1.5.3"
   const val FragmentKtx = "androidx.fragment:fragment-ktx:1.5.3"
 
-  const val WorkManager = "androidx.work:work-runtime:2.7.1"
-  const val WorkManagerKtx = "androidx.work:work-runtime-ktx:2.7.1"
+  const val Annotation = "androidx.annotation:annotation:1.4.0"
 
-  // https://mvnrepository.com/artifact/androidx.drawerlayout/drawerlayout
-  const val DrawerLayout = "androidx.drawerlayout:drawerlayout:1.1.1"
+  const val RecyclerView = "androidx.recyclerview:recyclerview:1.2.1"
+
+  const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+
+  const val CustomTabs = "androidx.browser:browser:1.4.0"
 
   // https://mvnrepository.com/artifact/androidx.viewpager2/viewpager2
   const val ViewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
 
-  const val SupportV4 = "androidx.legacy:legacy-support-v4:1.0.0"
-
-  const val CardView = "androidx.cardview:cardview:1.0.0"
+  const val VectorDrawable = "androidx.vectordrawable:vectordrawable:1.1.0"
+  const val VectorDrawableAnimated = "androidx.vectordrawable:vectordrawable-animated:1.1.0"
 }
 
-/**
- * Desc: Google official architecture
- * Ktx可与Java版本同时依赖，Ktx与Java存在类似功能的单独使用即可
- */
+// Desc: Google official architecture
+// link: https://developer.android.com/jetpack/androidx/explorer?case=popular
 object ArchitectureLibs {
-  // https://developer.android.com/topic/libraries/architecture/index.html
-
-  // https://mvnrepository.com/artifact/androidx.lifecycle
-  @Deprecated("Use Runtime/ViewModel/LiveData")
-  const val LifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
-
   private const val RuntimeVer = "2.4.1"
   const val LifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${RuntimeVer}"
   const val LifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${RuntimeVer}"
@@ -151,11 +82,13 @@ object ArchitectureLibs {
   const val LifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${LifecycleOtherVer}"
   const val LifecycleProcess = "androidx.lifecycle:lifecycle-process:${LifecycleOtherVer}"
   const val LifecycleService = "androidx.lifecycle:lifecycle-service:${LifecycleOtherVer}"
-  const val LifecycleReactiveStreams = "androidx.lifecycle:lifecycle-reactivestreams:${LifecycleOtherVer}"
-  const val LifecycleReactiveStreamsKtx = "androidx.lifecycle:lifecycle-reactivestreams-ktx:${LifecycleOtherVer}"
 
   // https://mvnrepository.com/artifact/androidx.startup
   const val Startup = "androidx.startup:startup-runtime:1.1.1"
+
+  private const val WorkManagerLibVer = "2.7.1"
+  const val WorkManager = "androidx.work:work-runtime:$WorkManagerLibVer"
+  const val WorkManagerKtx = "androidx.work:work-runtime-ktx:$WorkManagerLibVer"
 
   // https://mvnrepository.com/artifact/androidx.room
   private const val RoomLibVer = "2.4.1"
@@ -186,11 +119,74 @@ object ArchitectureLibs {
   const val NavigationCommonKtx = "androidx.navigation:navigation-common-ktx:${NavigationLibVer}"
 }
 
+object DepLibs {
+  // https://github.com/JetBrains/kotlin
+  const val KotlinLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KotlinVer}"
+  const val KotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${Versions.KotlinVer}"
+
+  // https://github.com/Kotlin/kotlinx.coroutines
+  private const val KotlinXVer = "1.6.4"
+  const val KotlinXCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinXVer}"
+  const val KotlinXAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KotlinXVer}"
+
+  // https://github.com/guolindev/PermissionX
+  const val PermissionX = "com.guolindev.permissionx:permissionx:1.7.1"
+
+  // https://github.com/tiann/FreeReflection
+  const val FreeReflection = "com.github.tiann:FreeReflection:3.1.0"
+
+  // https://github.com/tiann/epic
+  const val Epic = "com.github.tiann:epic:0.11.2"
+
+  // https://github.com/anggrayudi/SimpleStorage
+  const val SimpleStorage = "com.anggrayudi:storage:1.4.1"
+
+  // https://github.com/HokoFly/HokoBlur
+  const val HokoBlur = "io.github.hokofly:hoko-blur:1.3.7"
+
+  // https://github.com/wasabeef/Blurry
+  const val Blurry = "jp.wasabeef:blurry:4.0.1"
+
+  // https://github.com/greenrobot/EventBus
+  const val EventBus = "org.greenrobot:eventbus:3.3.1"
+
+  // https://github.com/google/gson
+  const val Gson = "com.google.code.gson:gson:2.9.0"
+
+  // https://github.com/jhy/jsoup
+  const val JSoup = "org.jsoup:jsoup:1.14.3"
+
+  // https://github.com/alibaba/ARouter
+  const val ARouter = "com.alibaba:arouter-api:1.5.2"
+  const val ARouterCompiler = "com.alibaba:arouter-compiler:1.5.2"
+  const val ARouterRegisterPlugin = "com.alibaba:arouter-register:1.0.2"
+
+  // https://github.com/bilibili/ijkplayer
+  private const val IjkPlayerVer = "0.8.8"
+  const val IjkPlayer = "tv.danmaku.ijk.media:ijkplayer-java:${IjkPlayerVer}"
+  const val IjkPlayerArm64 = "tv.danmaku.ijk.media:ijkplayer-arm64:${IjkPlayerVer}"
+  const val IjkPlayerArmv7a = "tv.danmaku.ijk.media:ijkplayer-armv7a:${IjkPlayerVer}"
+
+  // https://github.com/bilibili/DanmakuFlameMaster
+  const val DanmakuFlameMaster = "com.github.ctiao:DanmakuFlameMaster:0.9.25"
+  const val DanmakuNdkBitmap = "com.github.ctiao:ndkbitmap-armv7a:0.9.21"
+
+  // https://mvnrepository.com/artifact/com.google.dagger
+  private const val Dagger2Ver = "2.44"
+  const val Dagger2 = "com.google.dagger:dagger:${Dagger2Ver}"
+  const val Dagger2Compiler = "com.google.dagger:dagger-compiler:${Dagger2Ver}"
+  const val Dagger2Android = "com.google.dagger:dagger-android:${Dagger2Ver}"
+  const val Dagger2AndroidSupport = "com.google.dagger:dagger-android-support:${Dagger2Ver}"
+  const val Dagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:${Dagger2Ver}"
+  private const val HiltVer = "2.44"
+  const val Hilt = "com.google.dagger:hilt-android:${HiltVer}"
+  const val HiltCompiler = "com.google.dagger:hilt-android-compiler:${HiltVer}"
+}
+
 /**
  * Desc: Http Libs
  */
 object HttpLibs {
-  // https://square.github.io/retrofit
   // https://github.com/square/retrofit
   // https://mvnrepository.com/artifact/com.squareup.retrofit2
   private const val RetrofitVer = "2.9.0"
@@ -200,10 +196,9 @@ object HttpLibs {
   const val RetrofitAdapterRxJava2 = "com.squareup.retrofit2:adapter-rxjava2:${RetrofitVer}"
   const val RetrofitAdapterRxJava3 = "com.squareup.retrofit2:adapter-rxjava3:${RetrofitVer}"
 
-  // https://square.github.io/okhttp
   // https://github.com/square/okhttp
   // https://mvnrepository.com/artifact/com.squareup.okhttp3
-  private const val OkHttp3Ver = "4.9.3"
+  private const val OkHttp3Ver = "4.10.0"
   const val OkHttp3 = "com.squareup.okhttp3:okhttp:${OkHttp3Ver}"
   const val OkHttp3Logging = "com.squareup.okhttp3:logging-interceptor:${OkHttp3Ver}"
   const val OkHttp3UrlConnection = "com.squareup.okhttp3:okhttp-urlconnection:${OkHttp3Ver}"
@@ -260,6 +255,9 @@ object ImageLoaderLibs {
 
   // https://github.com/facebook/fresco
   const val Fresco = "com.facebook.fresco:fresco:2.6.0"
+
+  // https://github.com/Curzibn/Luban
+  const val LubanCompress = "top.zibin:Luban:1.1.8"
 }
 
 /**
@@ -290,11 +288,12 @@ object WidgetLibs {
 
   // https://github.com/drakeet/MultiType
   // https://github.com/PureWriter/about-page
+  // https://github.com/PureWriter/ToastCompat
   const val AboutPage = "com.drakeet.about:about:2.5.1"
   const val MultiType = "com.drakeet.multitype:multitype:4.3.0"
+  const val ToastCompat = "me.drakeet.support:toastcompat:1.1.0"
 
   // https://github.com/airbnb/lottie-android
-  // https://mvnrepository.com/artifact/com.airbnb.android/lottie
   const val Lottie = "com.airbnb.android:lottie:5.2.0"
 
   // https://github.com/scwang90/SmartRefreshLayout
