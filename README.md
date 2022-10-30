@@ -104,7 +104,10 @@ implementation AndroidXLibs.ConstraintLayout
 
 ## 4.Kotlin + ComposingBuild
 
+ 无论是 buildSrc 或是 composing, 使用多级 object/class 都需要移到 package 中，否则无法依赖。
+
 https://github.com/leown/ComposingBuildsDemo
+https://docs.gradle.org/current/userguide/composite_builds.html
 
 ## Gradle catalog
 
