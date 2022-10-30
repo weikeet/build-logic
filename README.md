@@ -1,39 +1,39 @@
-## 使用Kotlin管理Gradle依赖
-
-add gradle 7.x manager: https://juejin.cn/post/6997396071055900680
+# Gradle 依赖管理
 
 为了充分利用 Android Plugin for Gradle 3.0+ 的优点，将 Android项目拆分成多个 module 的做法越来越常见。
 
 然而，随着 module 数量的增多，我们很快就会遇到依赖管理的混乱问题。
 
-### 管理Gradle依赖的三种不同方法
+## 管理 Gradle 依赖方法
 
 1. 手动管理
-2. 使用 Google 推荐的`ext`
+2. 使用 Google 推荐 `ext`
 3. **Kotlin + buildSrc**
+4. **Kotlin + ComposingBuild**
+5. **Gradle catalog**
 
-### 1. 手动管理
+## 1.手动管理
 
 这是一种大多数人在采用的管理依赖的方法，但每次升级依赖库时都需要做大量的手动更改
 
 **module_a/build.gradle** 和 **module_b/build.gradle**
 
 ```groovy
-implementation 'androidx.core:core-ktx:1.7.0'
-implementation 'androidx.appcompat:appcompat:1.4.1'
-implementation 'com.google.android.material:material:1.5.0'
-implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+implementation 'androidx.core:core-ktx:1.9.0'
+implementation 'androidx.appcompat:appcompat:1.5.1'
+implementation 'com.google.android.material:material:1.6.0'
+implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 ```
 
-这里存在许多重复的配置，而且当你的项目有很多module时很难管理依赖库的版本更新
+这里存在许多重复的配置，而且当你的项目有很多 module 时很难管理依赖库的版本更新
 
-### 2. Google推荐：使用gradle的extra属性
+## 2.使用 gradle extra 属性
 
-Google在 [Android官方文档](https://developer.android.com/studio/build/gradle-tips) 中推荐这种管理依赖的方法。许多项目例如ButterKnife、Picasso等都在使用这种方法。
+Google在 [Android官方文档](https://developer.android.com/studio/build/gradle-tips) 中推荐这种管理依赖的方法。许多项目例如 ButterKnife、Picasso 等都在使用这种方法。
 
 此方法非常适用于更新 support library 的版本，因为每个 support library 都具有相同的版本号，你只需要在一个地方更改它就行了。 Retrofit 等其它第三方库也是如此。
 
-**Root-level build.gradle**
+Root-level build.gradle:
 
 ```groovy
 ext {
@@ -44,7 +44,7 @@ ext {
 }
 ```
 
-**module/build.gradle**
+module/build.gradle:
 
 ```groovy
 implementation dep.CoreKtx
@@ -53,9 +53,10 @@ implementation dep.MaterialDesign
 implementation dep.ConstraintLayout
 ```
 
-这种方法是手动管理的一大进步，但是缺少IDE的支持，更准确的说是在更新依赖库的时候IDE不能自动补全。
+- 这种方法是手动管理的一大进步，而且同样支持依赖更新提升
+- 但是缺少 IDE 的支持，更准确的说是在更新依赖库的时候 IDE 不能自动补全
 
-### 3. Kotlin + buildSrc
+### 3.Kotlin + buildSrc
 
 Support Android Studio Autocomplete 😄
 
@@ -74,14 +75,14 @@ Support Android Studio Autocomplete 😄
    }
    ```
 
-3. 在 `buildSrc` 文件夹里创建 `src/main/java` 文件夹，如下图所示。并在该文件夹下创建 `Dependencies.kt` 文件，文件内容参考之前的描述。
+3. 在 `buildSrc` 文件夹里创建 `src/main/kotlin` 文件夹，如下图所示。并在该文件夹下创建 `Dependencies.kt` 文件，文件内容参考之前的描述。
 
    ```kotlin
    object AndroidXLibs {
-      const val CoreKtx = "androidx.core:core-ktx:1.7.0"
-      const val AppCompat = "androidx.appcompat:appcompat:1.4.1"
-      const val MaterialDesign = "com.google.android.material:material:1.5.0"
-      const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.1.3"
+      const val CoreKtx = "androidx.core:core-ktx:1.9.0"
+      const val AppCompat = "androidx.appcompat:appcompat:1.5.1"
+      const val MaterialDesign = "com.google.android.material:material:1.6.0"
+      const val ConstraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
    }
    ```
 
@@ -98,7 +99,24 @@ implementation AndroidXLibs.MaterialDesign
 implementation AndroidXLibs.ConstraintLayout
 ```
 
-### 总结
+- 这样的缺点就是，每次依赖变更的时候都会触发全量构建，耗时较多，可以尝试使用 Gradle 的 [Build Cache](https://docs.gradle.org/current/userguide/build_cache.html) 来解决。
+- 另外 IDE 无法提示依赖更新，需要通过插件来检查
+
+## 4.Kotlin + ComposingBuild
+
+https://github.com/leown/ComposingBuildsDemo
+
+## Gradle catalog
+
+catalog 是 gradle 7.0+ 新增的功能，使用可以参考
+
+缺点：无法跳转到依赖申明的位置，弃！！！
+
+gradle-version-catalog 转换工具：
+
+https://takahirom.github.io/gradle-version-catalog-converter/
+
+## 总结
 
 推荐使用 **Kotlin + buildSrc** 的方法。它支持 **自动补全和单击跳转**，使得您无需在文件之间手动来回切换，方便你更好的管理 Gradle 依赖。
 
