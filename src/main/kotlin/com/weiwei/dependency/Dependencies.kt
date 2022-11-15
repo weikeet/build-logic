@@ -263,6 +263,10 @@ class Libs {
                 // https://github.com/PhilJay/MPAndroidChart
                 const val MPAndroidChart = "com.github.PhilJay:MPAndroidChart:v3.1.0"
             }
+
+            object tiann {
+                const val FreeReflection = "com.github.tiann:FreeReflection:3.1.0"
+            }
         }
 
         class google {
@@ -410,6 +414,11 @@ class Libs {
                 private const val coroutinesVer = "1.6.4"
                 const val kotlinx_coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVer}"
                 const val kotlinx_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVer}"
+
+                // https://github.com/Kotlin/kotlinx-datetime
+                const val kotlinx_datetime = "org.jetbrains.kotlinx:kotlinx-datetime:0.4.0"
+                // https://github.com/Kotlin/kotlinx.serialization
+                const val kotlinx_serialization_json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
             }
         }
 
