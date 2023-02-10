@@ -72,7 +72,7 @@ class Libs {
         }
 
         object appcompat {
-            const val appcompat = "androidx.appcompat:appcompat:1.5.1"
+            const val appcompat = "androidx.appcompat:appcompat:1.6.1"
         }
 
         object activity {
@@ -130,8 +130,8 @@ class Libs {
         }
 
         object fragment {
-            const val fragment = "androidx.fragment:fragment:1.5.3"
-            const val fragment_ktx = "androidx.fragment:fragment-ktx:1.5.3"
+            const val fragment = "androidx.fragment:fragment:1.5.5"
+            const val fragment_ktx = "androidx.fragment:fragment-ktx:1.5.5"
         }
 
         object recyclerview {
@@ -297,7 +297,7 @@ class Libs {
                 }
 
                 object material {
-                    const val material = "com.google.android.material:material:1.6.1"
+                    const val material = "com.google.android.material:material:1.8.0"
                 }
 
                 object play {

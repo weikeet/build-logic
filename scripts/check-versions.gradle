@@ -1,19 +1,46 @@
+// https://github.com/ben-manes/gradle-versions-plugin/blob/master/examples/groovy/build.gradle
+
 apply plugin: "com.github.ben-manes.versions"
 
-def isNonStable = { ComponentSelection selection ->
-  boolean rejected = ['release', 'final', 'alpha', 'beta', 'rc', 'ga'].any { qualifier -> selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+tasks.named("dependencyUpdates").configure {
+  checkForGradleUpdate = true
+
+  // Example 1: reject all non stable versions
+  rejectVersionIf {
+    isNonStable(candidate.version)
   }
-  return rejected
+
+  // // Example 2: disallow release candidates as upgradable versions from stable versions
+  // rejectVersionIf {
+  //   isNonStable(candidate.version) && !isNonStable(currentVersion)
+  // }
+  //
+  // // Example 3: using the full syntax
+  // resolutionStrategy {
+  //   componentSelection {
+  //     all {
+  //       if (isNonStable(candidate.version) && !isNonStable(currentVersion)) {
+  //         reject('Release candidate')
+  //       }
+  //     }
+  //   }
+  // }
 }
 
-tasks.named("dependencyUpdates").configure {
-  resolutionStrategy {
-    componentSelection {
-      all { ComponentSelection selection ->
-        if (isNonStable(selection)) {
-          selection.reject('Release candidate')
-        }
-      }
-    }
-  }
-}
+// def isNonStable = { ComponentSelection selection ->
+//   boolean rejected = ['release', 'final', 'alpha', 'beta', 'rc', 'ga'].any { qualifier -> selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+//   }
+//   return rejected
+// }
+//
+// tasks.named("dependencyUpdates").configure {
+//   resolutionStrategy {
+//     componentSelection {
+//       all { ComponentSelection selection ->
+//         if (isNonStable(selection)) {
+//           selection.reject('Release candidate')
+//         }
+//       }
+//     }
+//   }
+// }

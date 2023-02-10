@@ -135,11 +135,22 @@ https://github.com/ben-manes/gradle-versions-plugin
 //😳 add plugin
 // add to root build.gradle ->buildscript -> dependencies
 // https://github.com/ben-manes/gradle-versions-plugin
-classpath 'com.github.ben-manes:gradle-versions-plugin:0.42.0'
+classpath 'com.github.ben-manes:gradle-versions-plugin:0.45.0'
 
 //😳 apply checkVersions
-// add to module build.gradle
-apply from: './buildSrc/check-versions.gradle'
+// add to root build.gradle last
+apply from: 'build-logic/scripts/check-versions.gradle'
+```
+
+```groovy
+// 7.0+ use plugins
+plugins {
+  id "com.github.ben-manes.versions" version "$version"
+}
+
+//😳 apply checkVersions
+// add to root build.gradle last
+apply from: 'build-logic/scripts/check-versions.gradle'
 ```
 
 执行命令检查库更新
