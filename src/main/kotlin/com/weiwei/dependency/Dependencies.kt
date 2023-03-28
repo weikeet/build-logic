@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-@file:Suppress("unused", "objectName")
+@file:Suppress("unused", "objectName", "ClassName")
 
 package com.weiwei.dependency
 
@@ -323,6 +323,12 @@ class Libs {
                 private const val HiltVer = "2.41"
                 const val hilt_android = "com.google.dagger:hilt-android:${HiltVer}"
                 const val hilt_android_compiler = "com.google.dagger:hilt-android-compiler:${HiltVer}"
+            }
+        }
+
+        class jakewharton {
+            object timber {
+                const val timber = "com.jakewharton.timber:timber:5.0.1"
             }
         }
 
